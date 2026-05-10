@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Components/Pages/Home'
-import Login from './Components/Pages/Login';
-import CrearCuenta from './Components/Pages/CrearCuenta'
+import Home from './Components/pages/Home'
+import Login from './Components/pages/Login';
+import CrearCuenta from './Components/pages/CrearCuenta'
 import './App.css'
 
 function App() {

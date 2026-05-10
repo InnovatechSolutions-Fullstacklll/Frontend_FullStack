@@ -1,29 +1,26 @@
 import { useState } from 'react';
-import Navbar from "../organisms/Navbar";
-import Footer from "../organisms/Footer";
+import Navbar from "../Organism/Navbar";
+import Footer from "../Organism/Footer";
 import "../Style/Login.css";
 
 function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [mensaje, setMensaje] = useState('')
-    const validarFormulario = async (e) => {
-    e.preventDefault()
-    setError('')
-
-    if (!email.includes('@')) {
-      setError('El email debe ser válido')
-      return
-    }
-    
+    const [error, setError] = useState('')
 
     const handleSubmit = (e) => {
-        e.preventDefault()    
+        e.preventDefault()
+        setError('')
+
+        if (!email.includes('@')) {
+            setError('El email debe ser válido')
+            return
+        }
+
         if (email === 'admin@ejemplo.com' && password === '1234') {
-            setMensaje('¡Bienvenido de nuevo!')
-            if(onLoginSuccess) setTimeout(() => onLoginSuccess('home'), 1000);
+            setError('¡Bienvenido de nuevo!')
         } else {
-            setMensaje('Credenciales incorrectas. Intenta de nuevo.')
+            setError('Credenciales incorrectas. Intenta de nuevo.')
         }
     }
 
@@ -60,7 +57,7 @@ function Login() {
 
                         <button type="submit">Ingresar</button>
                     
-                        {mensaje && <p className="mensaje">{mensaje}</p>}
+                        {error && <p className="error-message">{error}</p>}
                     </form>
                 </div>
             </main>
@@ -68,6 +65,5 @@ function Login() {
             <Footer />
         </div>
     )
-    }
 }
 export default Login
