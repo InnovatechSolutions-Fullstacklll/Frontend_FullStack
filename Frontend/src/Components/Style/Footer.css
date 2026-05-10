@@ -1,0 +1,14 @@
+.site-footer {
+  background: #ffffff;
+  padding: 18px 32px;
+  text-align: center;
+  color: #6b6880;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+@media (max-width: 900px) {
+  .site-footer {
+    padding-inline: 24px;
+  }
+}
