@@ -3,6 +3,11 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 import Login from './Login'
+import { loginUser } from '../../Service/authService'
+
+vi.mock('../../Service/authService', () => ({
+  loginUser: vi.fn(),
+}))
 
 describe('Login', () => {
   it('renderiza el formulario de login', () => {
@@ -18,6 +23,7 @@ describe('Login', () => {
   })
 
   it('muestra mensaje de credenciales incorrectas', async () => {
+    loginUser.mockRejectedValueOnce({ response: { status: 401 } })
     const user = userEvent.setup()
     render(
       <MemoryRouter>
@@ -33,6 +39,7 @@ describe('Login', () => {
   })
 
   it('muestra mensaje de bienvenido con credenciales correctas', async () => {
+    loginUser.mockResolvedValueOnce({ data: { token: 'token-falso' } })
     const user = userEvent.setup()
     render(
       <MemoryRouter>

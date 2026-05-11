@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { loginUser } from '../../Service/authService'; // Asegúrate de crear este archivo
 import Navbar from "../Organism/Navbar";
 import Footer from "../Organism/Footer";
@@ -8,7 +8,7 @@ import Fondo1 from "../../assets/Logos/Fondo1.jpeg";
 
 function Login() {
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [clave1, setClave1] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -26,7 +26,7 @@ function Login() {
 
         try {
             // Llamada al BFF (puerto 8082) que redirige al microservicio de Login (8081)
-            const response = await loginUser(email, password);
+            const response = await loginUser(email, clave1);
             
             console.log('Login exitoso:', response);
             setError('¡Bienvenido de nuevo!');
@@ -109,12 +109,12 @@ function Login() {
                                 </div>
 
                                 <div className="input-group">
-                                    <label htmlFor="password">Contraseña:</label>
+                                    <label htmlFor="clave1">Contraseña:</label>
                                     <input
-                                        id="password"
-                                        type="password"
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        id="clave1"
+                                        type="clave1"
+                                        value={clave1}
+                                        onChange={(e) => setClave1(e.target.value)}
                                         placeholder="********"
                                         disabled={loading}
                                         required
@@ -126,7 +126,7 @@ function Login() {
                                         <input type="checkbox" disabled={loading} />
                                         Recuérdame
                                     </label>
-                                    <a href="/olvide-mi-contraseña" className="forgot-password">
+                                    <a href="/olvide-mi-contraseña" className="forgot-clave1">
                                         ¿Olvidaste tu contraseña?
                                     </a>
                                 </div>
