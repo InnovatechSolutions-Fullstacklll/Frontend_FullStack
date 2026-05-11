@@ -1,5 +1,5 @@
-﻿/* =========================
-   LOGIN GENERAL
+/* =========================
+   REGISTRO GENERAL
 ========================= */
 
 *{
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.login-container{
+.register-container{
   width: 100%;
   min-height: 100vh;
   background: #020b1c;
@@ -23,9 +23,9 @@
    CARD PRINCIPAL
 ========================= */
 
-.login-card{
+.register-card{
   width: 950px;
-  min-height: 560px;
+  min-height: 600px;
   background: #ffffff;
   border-radius: 30px;
   border: 3px solid #1d1d1d;
@@ -38,7 +38,7 @@
    LADO IZQUIERDO
 ========================= */
 
-.login-welcome{
+.register-welcome{
   width: 50%;
   padding: 40px 35px;
   position: relative;
@@ -64,8 +64,8 @@
   transform: translateX(-5px);
 }
 
-.login-welcome h1{
-  font-size: 60px;
+.register-welcome h1{
+  font-size: 50px;
   line-height: 0.95;
   text-align: center;
   font-weight: 900;
@@ -93,7 +93,7 @@
 /* IMAGEN */
 
 .temp-illustration img{
-  width: 320px;
+  width: 280px;
   max-width: 100%;
   object-fit: contain;
   animation: floatImage 3s ease-in-out infinite;
@@ -116,24 +116,23 @@
 }
 
 .brand-logo img{
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
 }
 .brand-name{
-  font-size: 10px;
-  font-weight: 600;
+  font-size: 52px;
+  font-weight: 800;
   background: linear-gradient(90deg,#8f00ff,#ff7300);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 1rem;
 }
 
 /* =========================
    FORMULARIO
 ========================= */
 
-.login-form-section{
+.register-form-section{
   width: 50%;
   padding: 35px;
   display: flex;
@@ -142,25 +141,25 @@
   position: relative;
 }
 
-.login-form-section form{
+.register-form-section form{
   width: 100%;
   position: relative;
   z-index: 2;
 }
 
-.login-form-section h2{
+.register-form-section h2{
   text-align: center;
-  font-size: 52px;
-  margin-bottom: 30px;
+  font-size: 48px;
+  margin-bottom: 25px;
   font-weight: 800;
   color: #000;
 }
 
-.login-form-section h2 span{
-  color: #ff7300;
+.register-form-section h2 span{
+  color: #8f00ff;
 }
 
-.login-form-section::before{
+.register-form-section::before{
   content: "";
   position: absolute;
   inset: 18px;
@@ -172,7 +171,7 @@
 /* Inputs */
 
 .input-group{
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   position: relative;
   z-index: 2;
 }
@@ -186,7 +185,7 @@
 
 .input-group input{
   width: 100%;
-  padding: 16px 22px;
+  padding: 14px 20px;
   border-radius: 50px;
   border: 2px solid transparent;
   background: #e7e7e7;
@@ -208,49 +207,51 @@
 }
 
 /* =========================
-   OPCIONES
+   TERMINOS Y CONDICIONES
 ========================= */
 
-.form-options{
+.terms-container{
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #222;
   margin-bottom: 20px;
   position: relative;
   z-index: 2;
 }
 
-.forgot-password{
-  text-decoration: none;
-  color: #8d8d8d;
-  font-size: 14px;
-  text-align: center;
-}
-
-.checkbox-container{
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #222;
-}
-
-.checkbox-container input{
+.terms-container input{
   accent-color: #71d3c5;
+  margin-top: 2px;
+}
+
+.terms-text{
+  line-height: 1.4;
+}
+
+.terms-link{
+  color: #8f00ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.terms-link:hover{
+  text-decoration: underline;
 }
 
 /* =========================
    BOTONES
 ========================= */
 
-.btn-login{
+.btn-register{
   width: 100%;
   padding: 15px;
   border: none;
   border-radius: 10px;
-  background: #ff7300;
+  background: #8f00ff;
   color: white;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
@@ -259,9 +260,9 @@
   z-index: 2;
 }
 
-.btn-login:hover{
+.btn-register:hover{
   transform: scale(1.02);
-  background: #eb6a00;
+  background: #7a00e0;
 }
 
 .error-message{
@@ -331,26 +332,26 @@
 
 @media(max-width: 900px){
 
-  .login-card{
+  .register-card{
     flex-direction: column;
     width: 100%;
   }
 
-  .login-welcome,
-  .login-form-section{
+  .register-welcome,
+  .register-form-section{
     width: 100%;
   }
 
-  .login-welcome h1{
-    font-size: 42px;
+  .register-welcome h1{
+    font-size: 38px;
   }
 
   .brand-name{
     font-size: 38px;
   }
 
-  .login-form-section h2{
-    font-size: 40px;
+  .register-form-section h2{
+    font-size: 36px;
   }
 }
 
