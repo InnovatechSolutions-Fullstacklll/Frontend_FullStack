@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { registerUser } from '../../Service/authService'
 import Navbar from '../Organism/Navbar'
 import Footer from '../Organism/Footer'
 import '../Style/CrearCuenta.css'
@@ -11,12 +12,14 @@ export default function CrearCuenta() {
   const [clave2, setClave2] = useState('')
   const [aceptaTerminos, setAceptaTerminos] = useState(false)
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
   const validarFormulario = async (e) => {
     e.preventDefault()
     setError('')
 
+    // 1. Validaciones locales
     if (nombre.length < 3) {
       setError('El nombre debe tener al menos 3 caracteres')
       return
@@ -34,7 +37,31 @@ export default function CrearCuenta() {
       return
     }
 
-    navigate('/')
+    // 2. Envío de datos al Backend
+    setLoading(true)
+    try {
+      const userData = {
+        nombre: nombre,
+        email: email,
+        password: clave1
+      }
+
+      const response = await registerUser(userData)
+      console.log('Registro exitoso:', response)
+      
+    
+      navigate('/') 
+      
+    } catch (err) {
+      console.error('Error al registrar:', err)
+      if (err.response) {
+        setError(err.response.data.message || 'Error al crear la cuenta. Intenta con otro email.')
+      } else {
+        setError('No hay conexión con el servidor. Revisa tu BFF.')
+      }
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleBack = () => {
@@ -67,7 +94,7 @@ export default function CrearCuenta() {
                     alt="Logo marca"
                   />
                 </div>
-                <div className="brand-name">RegisterApp</div>
+                <div className="brand-name">Innovatech</div>
               </div>
             </section>
 
@@ -84,6 +111,7 @@ export default function CrearCuenta() {
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
                     placeholder="Ingresa tu nombre completo"
+                    disabled={loading}
                     required
                   />
                 </div>
@@ -96,6 +124,7 @@ export default function CrearCuenta() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="tu@email.com"
+                    disabled={loading}
                     required
                   />
                 </div>
@@ -108,6 +137,7 @@ export default function CrearCuenta() {
                     value={clave1}
                     onChange={(e) => setClave1(e.target.value)}
                     placeholder="Crea una contraseña segura"
+                    disabled={loading}
                     required
                   />
                 </div>
@@ -120,6 +150,7 @@ export default function CrearCuenta() {
                     value={clave2}
                     onChange={(e) => setClave2(e.target.value)}
                     placeholder="Repite tu contraseña"
+                    disabled={loading}
                     required
                   />
                 </div>
@@ -130,16 +161,25 @@ export default function CrearCuenta() {
                     id="terminos"
                     checked={aceptaTerminos}
                     onChange={(e) => setAceptaTerminos(e.target.checked)}
+                    disabled={loading}
                     required
                   />
                   <label htmlFor="terminos" className="terms-text">
-                    Acepto los <a href="/terminos" className="terms-link">términos y condiciones</a> y la <a href="/privacidad" className="terms-link">política de privacidad</a>
+                    Acepto los <a href="/terminos" className="terms-link">términos y condiciones</a>
                   </label>
                 </div>
 
-                <button type="submit" className="btn-register">Crear Cuenta</button>
+                <button 
+                  type="submit" 
+                  className="btn-register" 
+                  disabled={loading}
+                >
+                  {loading ? 'Procesando...' : 'Crear Cuenta'}
+                </button>
+
                 <div className="divider">o</div>
-                <button type="button" className="btn-google">
+                
+                <button type="button" className="btn-google" disabled={loading}>
                   <img
                     className="hero-image"
                     src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
@@ -158,11 +198,3 @@ export default function CrearCuenta() {
     </div>
   )
 }
-
-
-
-    
-
-
-
-

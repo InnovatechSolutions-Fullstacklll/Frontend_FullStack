@@ -1,4 +1,5 @@
 ﻿import { useState } from 'react';
+import { loginUser } from '../../Service/authService'; // Asegúrate de crear este archivo
 import Navbar from "../Organism/Navbar";
 import Footer from "../Organism/Footer";
 import "../Style/Login.css";
@@ -6,29 +7,58 @@ import Logo from "../../assets/Logos/Logo.jpeg";
 import Fondo1 from "../../assets/Logos/Fondo1.jpeg";
 
 function Login() {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [error, setError] = useState('')
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setError('')
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError('');
+        setLoading(true);
 
+        // Validaciones básicas de cliente
         if (!email.includes('@')) {
-            setError('El email debe ser válido')
-            return
+            setError('El email debe ser válido');
+            setLoading(false);
+            return;
         }
 
-        if (email === 'admin@ejemplo.com' && password === '1234') {
-            setError('¡Bienvenido de nuevo!')
-        } else {
-            setError('Credenciales incorrectas. Intenta de nuevo.')
+        try {
+            // Llamada al BFF (puerto 8082) que redirige al microservicio de Login (8081)
+            const response = await loginUser(email, password);
+            
+            console.log('Login exitoso:', response);
+            setError('¡Bienvenido de nuevo!');
+            
+            // Aquí podrías guardar el token (localStorage) o redireccionar
+            // window.location.href = '/home';
+
+        } catch (err) {
+            console.error('Error en la petición:', err);
+            
+            // Manejo dinámico de errores
+            if (err.response) {
+                // El servidor respondió con un error (401, 404, 500, etc.)
+                if (err.response.status === 401) {
+                    setError('Credenciales incorrectas. Intenta de nuevo.');
+                } else {
+                    setError('Error en el servidor: ' + err.response.status);
+                }
+            } else if (err.request) {
+                // La petición se hizo pero no hubo respuesta (BFF apagado o problema de red)
+                setError('No se pudo conectar con el servidor. Verifica que el BFF esté encendido.');
+            } else {
+                setError('Ocurrió un error inesperado.');
+            }
+        } finally {
+            setLoading(false);
         }
-    }
+    };
 
     const handleBack = () => {
-        window.history.back()
-    }
+        window.history.back();
+    };
 
     return (
         <div className="login-page">
@@ -73,6 +103,7 @@ function Login() {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         placeholder="admin@ejemplo.com"
+                                        disabled={loading}
                                         required
                                     />
                                 </div>
@@ -85,13 +116,14 @@ function Login() {
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         placeholder="********"
+                                        disabled={loading}
                                         required
                                     />
                                 </div>
 
                                 <div className="form-options">
                                     <label className="checkbox-container">
-                                        <input type="checkbox" />
+                                        <input type="checkbox" disabled={loading} />
                                         Recuérdame
                                     </label>
                                     <a href="/olvide-mi-contraseña" className="forgot-password">
@@ -99,9 +131,17 @@ function Login() {
                                     </a>
                                 </div>
 
-                                <button type="submit" className="btn-login">Ingresar</button>
+                                <button 
+                                    type="submit" 
+                                    className="btn-login" 
+                                    disabled={loading}
+                                >
+                                    {loading ? 'Conectando...' : 'Ingresar'}
+                                </button>
+                                
                                 <div className="divider">o</div>
-                                <button type="button" className="btn-google">
+                                
+                                <button type="button" className="btn-google" disabled={loading}>
                                     <img
                                         className="hero-image"
                                         src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
@@ -110,7 +150,11 @@ function Login() {
                                     Iniciar con Gmail
                                 </button>
 
-                                {error && <p className="error-message">{error}</p>}
+                                {error && (
+                                    <p className={`message ${error.includes('Bienvenido') ? 'success-message' : 'error-message'}`}>
+                                        {error}
+                                    </p>
+                                )}
                             </form>
                         </section>
                     </div>
@@ -118,6 +162,7 @@ function Login() {
             </main>
             <Footer />
         </div>
-    )
+    );
 }
-export default Login
+
+export default Login;
