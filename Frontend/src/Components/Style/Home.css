@@ -11,7 +11,6 @@ body {
   overflow-x: hidden; /* Evita scroll horizontal si hay elementos que se salen del viewport */
 }
 
-
 .home-page {
   min-height: 100vh;
   background: #020b1c;
@@ -20,6 +19,10 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #111;
 }
+
+/* ==========================================================================
+   VISTA PÚBLICA (Tu diseño original intacto)
+   ========================================================================== */
 
 .hero-section {
   display: grid;
@@ -129,10 +132,43 @@ body {
   box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
 }
 
+/* ==========================================================================
+   VISTA PRIVADA (Dashboard con columna a la izquierda)
+   ========================================================================== */
+
+.dashboard-layout {
+  display: flex;
+  flex-direction: row; /* Fuerza la disposición en fila: Menu | Contenido */
+  flex: 1;
+  width: 100%;
+  background: #ffffff; /* Caja interna blanca para mantener tu estética limpia */
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 40px;
+  color: #111;
+  background: #f8fafc; /* Un gris muy claro para diferenciarlo del menú */
+}
+
+.dashboard-content h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #020b1c;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
 @media (max-width: 900px) {
   .hero-section {
     grid-template-columns: 1fr;
     padding: 32px 24px;
+  }
+  
+  .dashboard-layout {
+    flex-direction: column; /* En pantallas chicas, el menú pasa arriba */
   }
 }
 
