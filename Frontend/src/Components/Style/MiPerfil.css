@@ -1,0 +1,182 @@
+/* ==========================================================================
+   1. CONTENEDOR ESTRUCTURAL PRINCIPAL (LAYOUT)
+   ========================================================================== */
+/* Envuelve toda la pantalla de perfil */
+.profile-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #020b1c;
+}
+
+/* Área de contenido (Va a la derecha del Sidebar si usas el mismo Layout) */
+.profile-content {
+  background: linear-gradient(180deg, #0b172c 0%, #f8fafc 100%);
+  flex: 1;
+  padding: 40px; /* Añadido para dar aire respecto a los bordes de la pantalla */
+}
+
+
+/* ==========================================================================
+   2. TARJETAS COMPONENTES (CARDS BASE)
+   ========================================================================== */
+/* Estilos compartidos para la tarjeta principal del usuario y las tarjetas secundarias */
+.profile-hero-card,
+.profile-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(143, 0, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+  padding: 24px;
+}
+
+/* Grilla para organizar las tarjetas secundarias en columnas */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columnas iguales */
+  gap: 24px;
+}
+
+/* Tarjeta específica para configuraciones del perfil */
+.settings-card {
+  margin-top: 24px;
+}
+
+.settings-card p {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+
+/* ==========================================================================
+   3. BLOQUE HERO DEL USUARIO (AVATAR Y NOMBRE)
+   ========================================================================== */
+/* Tarjeta superior que muestra el resumen del usuario */
+.profile-hero-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* Círculo con las iniciales del usuario */
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center; /* Centra las iniciales al medio */
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, #8f00ff, #ff7300); /* Degradado idéntico al Home */
+  box-shadow: 0 10px 24px rgba(143, 0, 255, 0.25);
+}
+
+.profile-hero-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+  color: #020b1c;
+}
+
+
+/* ==========================================================================
+   4. CABECERAS INTERNAS Y ELEMENTOS DE ESTADO (BADGES)
+   ========================================================================== */
+/* Fila superior dentro de las tarjetas para alinear títulos y etiquetas */
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Envía el título a la izquierda y el badge a la derecha */
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-header-row h3,
+.profile-card h3 {
+  color: #020b1c;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+/* Etiqueta de estado (ej: "Activo", "Premium", etc.) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(104, 211, 145, 0.16); /* Fondo verde suave */
+  color: #137a3d; /* Texto verde oscuro contrastante */
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+
+/* ==========================================================================
+   5. LISTAS DE DATOS Y LÍNEA DE TIEMPO (ACTIVITY)
+   ========================================================================== */
+/* Estilos base para las listas dentro de las tarjetas */
+.profile-list,
+.activity-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Filas de información clave-valor (ej: Correo: usuario@correo.com) */
+.profile-item {
+  display: flex;
+  justify-content: space-between; /* Nombre a la izquierda, dato a la derecha */
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08); /* Línea divisoria sutil */
+  color: #334155;
+}
+
+.profile-item span {
+  color: #475569; /* Color para la clave */
+}
+
+.profile-item strong {
+  color: #020b1c; /* Color resaltado para el valor */
+  text-align: right;
+}
+
+/* Historial de actividad o Bitácora (Estilo línea de tiempo) */
+.activity-list li {
+  padding: 10px 0;
+  border-left: 3px solid #ff7300; /* Línea naranja vertical a la izquierda */
+  padding-left: 12px;
+  color: #334155;
+}
+
+
+/* ==========================================================================
+   6. RESPONSIVE (ADAPTACIÓN A TABLETS Y MÓVILES)
+   ========================================================================== */
+/* Cambios para Tablets y pantallas medianas */
+@media (max-width: 980px) {
+  .profile-grid {
+    grid-template-columns: 1fr; /* La grilla de 2 columnas pasa a ser de 1 sola columna */
+  }
+}
+
+/* Cambios para Teléfonos inteligentes */
+@media (max-width: 640px) {
+  /* El bloque del Avatar y nombre pasa a ordenarse de arriba a abajo */
+  .profile-hero-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Las filas de información pasan a romper la línea para no amontonarse */
+  .profile-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-item strong {
+    text-align: left; /* Alinea el texto a la izquierda en pantallas chicas */
+  }
+}
