@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. RESETEO Y ESTILOS GLOBALES BASE
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +10,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #020b1c; /* Asegúrate de que el fondo del body coincida con tu app */
-  overflow-x: hidden; /* Evita scroll horizontal si hay elementos que se salen del viewport */
+  background-color: #020b1c; 
+  overflow-x: hidden; /* Evita que la pantalla se mueva hacia los lados */
 }
 
-
+/* Contenedor principal de toda la página Home */
 .home-page {
   min-height: 100vh;
   background: #020b1c;
@@ -21,18 +24,20 @@ body {
   color: #111;
 }
 
+
+/* ==========================================================================
+   2. VISTA PÚBLICA: ESTRUCTURA DEL HERO (LANDING PAGE)
+   ========================================================================== */
 .hero-section {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.2fr 1fr; /* Divide la pantalla: texto izquierda, foto derecha */
   gap: 32px;
   align-items: center;
-  padding: 60px 10%; /* Aumentamos el padding lateral para controlarlo mejor */
-  width: 100vw;       /* Forzamos a que use el ancho total de la ventana */
-  margin-left: 50%;   /* Truco para centrar si el padre tiene restricciones */
+  padding: 60px 10%; 
+  width: 100vw;       
+  margin-left: 50%;   /* Truco para romper márgenes y usar el 100% del ancho */
   transform: translateX(-50%); 
   background: #ffffff;
-  border-radius: 0;
-  box-shadow: none;
   flex: 1;
 }
 
@@ -40,6 +45,10 @@ body {
   max-width: 560px;
 }
 
+
+/* ==========================================================================
+   3. VISTA PÚBLICA: TEXTOS Y ELEMENTOS DE BIENVENIDA
+   ========================================================================== */
 .eyebrow {
   margin: 0 0 16px;
   text-transform: uppercase;
@@ -50,7 +59,7 @@ body {
 
 .hero-content h1 {
   margin: 0;
-  font-size: clamp(2.3rem, 4vw, 4.4rem);
+  font-size: clamp(2.3rem, 4vw, 4.4rem); /* Texto responsivo que se adapta al tamaño */
   line-height: 1.03;
   color: #000;
 }
@@ -62,6 +71,10 @@ body {
   color: #4a4a67;
 }
 
+
+/* ==========================================================================
+   4. VISTA PÚBLICA: BOTONES Y ANIMACIONES (HOVER)
+   ========================================================================== */
 .hero-buttons {
   display: flex;
   gap: 14px;
@@ -87,7 +100,7 @@ body {
 }
 
 .button-primary:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px); /* Pequeño salto hacia arriba al pasar el mouse */
 }
 
 .button-secondary {
@@ -101,12 +114,16 @@ body {
   background: #fff2e5;
 }
 
+
+/* ==========================================================================
+   5. VISTA PÚBLICA: CONTENEDOR DE LA ILUSTRACIÓN (FOTO)
+   ========================================================================== */
 .hero-illustration {
   min-height: 320px;
   border-radius: 30px;
   background: linear-gradient(180deg, #f7f0ff 0%, #fff4eb 100%);
   display: grid;
-  place-items: center;
+  place-items: center; /* Centra la imagen perfectamente */
   box-shadow: 0 32px 80px rgba(79, 70, 229, 0.08);
 }
 
@@ -116,27 +133,53 @@ body {
   border-radius: 20px;
 }
 
-.illustration-card {
-  width: min(180px, 100%);
-  aspect-ratio: 1 / 1;
-  border-radius: 24px;
-  display: grid;
-  place-items: center;
-  background: #ffffff;
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: #4f46e5;
-  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+
+/* ==========================================================================
+   6. VISTA PRIVADA: INTERFAZ DEL DASHBOARD (LUEGO DEL LOGIN)
+   ========================================================================== */
+/* Contenedor padre que junta el menú lateral y la zona de trabajo */
+.dashboard-layout {
+  display: flex;
+  flex-direction: row; /* Coloca el Sidebar a la izquierda y el contenido a la derecha */
+  flex: 1;
+  width: 100%;
+  background: #ffffff; 
 }
 
+/* Espacio blanco/grisáceo de la derecha donde irá tu aplicación interna */
+.dashboard-content {
+  flex-grow: 1; /* Obliga a este contenedor a usar todo el espacio que sobre a la derecha */
+  padding: 40px;
+  color: #111;
+  background: #f8fafc; 
+}
+
+.dashboard-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #020b1c;
+}
+
+
+/* ==========================================================================
+   7. DISEÑO RESPONSIVO (ADAPTACIÓN A MÓVILES Y TABLETS)
+   ========================================================================== */
 @media (max-width: 900px) {
+  /* En tablets, el Hero público pasa a ser de una sola columna */
   .hero-section {
     grid-template-columns: 1fr;
     padding: 32px 24px;
   }
+  
+  /* En tablets, el menú lateral privado pasa a estar arriba en vez de al lado */
+  .dashboard-layout {
+    flex-direction: column; 
+  }
 }
 
 @media (max-width: 600px) {
+  /* Ajustes extra para teléfonos muy chicos */
   .hero-section {
     gap: 24px;
   }
