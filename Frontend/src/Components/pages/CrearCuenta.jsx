@@ -180,17 +180,6 @@ export default function CrearCuenta() {
                   {loading ? 'Procesando...' : 'Crear Cuenta'}
                 </button>
 
-                <div className="divider">o</div>
-                
-                <button type="button" className="btn-google" disabled={loading}>
-                  <img
-                    className="hero-image"
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-                    alt="Gmail"
-                  />
-                  Registrarse con Gmail
-                </button>
-
                 {error && <p className="error-message">{error}</p>}
               </form>
             </section>
