@@ -29,8 +29,7 @@ export const isAuthenticated = () => {
 // Función para cerrar sesión
 export const logout = () => {
   localStorage.removeItem("token");
-  // Opcional: redirigir al login
-  // window.location.href = '/login';
+  localStorage.removeItem("user");
 };
 
 // Función para obtener el perfil del usuario (si tienes un endpoint)

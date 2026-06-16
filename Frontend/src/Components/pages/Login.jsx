@@ -37,6 +37,9 @@ function Login() {
                 localStorage.setItem("token", response.token);
             }
 
+            const userEmail = response?.user?.email || response?.email || email;
+            localStorage.setItem("user", JSON.stringify({ email: userEmail }));
+
             navigate('/proyectos', { replace: true });
 
         } catch (err) {
@@ -128,33 +131,12 @@ function Login() {
                   />
                 </div>
 
-                <div className="form-options">
-                  <label className="checkbox-container">
-                    <input type="checkbox" disabled={loading} />
-                    Recuérdame
-                  </label>
-                  <a href="/olvide-mi-contraseña" className="forgot-clave1">
-                    ¿Olvidaste tu contraseña?
-                  </a>
-                </div>
-
                                 <button 
                                     type="submit" 
                                     className="btn-login" 
                                     disabled={loading}
                                 >
                                     {loading ? 'Conectando...' : 'Ingresar'}
-                                </button>
-                                
-                                <div className="divider">o</div>
-                                
-                                <button type="button" className="btn-google" disabled={loading}>
-                                    <img
-                                        className="hero-image"
-                                        src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-                                        alt="Gmail"
-                                    />
-                                    Iniciar con Gmail
                                 </button>
 
                 {error && (

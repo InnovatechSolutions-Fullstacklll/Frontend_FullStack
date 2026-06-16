@@ -115,6 +115,7 @@ describe('Auth Service', () => {
 
       logout()
       expect(localStorage.removeItem).toHaveBeenCalledWith('token')
+      expect(localStorage.removeItem).toHaveBeenCalledWith('user')
     })
 
     it('isAuthenticated returns false when no token', async () => {
