@@ -150,7 +150,7 @@ describe('CrearCuenta', () => {
 
     expect(authService.registerUser).toHaveBeenCalled()
     expect(localStorage.getItem('token')).toBe('mock-jwt-token')
-    expect(mockNavigate).toHaveBeenCalledWith('/login')
+    expect(mockNavigate).toHaveBeenCalledWith('/login', { replace: true })
   })
 
   it('registra exitosamente sin devolver token y navega al login', async () => {
@@ -175,7 +175,7 @@ describe('CrearCuenta', () => {
 
     expect(authService.registerUser).toHaveBeenCalled()
     expect(localStorage.getItem('token')).toBeNull()
-    expect(mockNavigate).toHaveBeenCalledWith('/login')
+    expect(mockNavigate).toHaveBeenCalledWith('/login', { replace: true })
   })
 
   it('muestra mensaje de error del backend si registerUser responde con error y err.response', async () => {

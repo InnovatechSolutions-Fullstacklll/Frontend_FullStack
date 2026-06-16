@@ -38,8 +38,8 @@ export const PROJECTS_SERVICE_URL = activeConfig.PROJECTS_SERVICE_URL;
 export const METRICS_SERVICE_URL = activeConfig.METRICS_SERVICE_URL;
 
 export const API_ENDPOINTS = {
-  register: "/api/register",
-  login: "/api/login",
+  register: "/api/register/user",
+  login: "/api/login/auth",
   roles: "/api/roles",
   projects: "/api/projects",
   metrics: "/api/metrics",

@@ -1,9 +1,10 @@
 // src/Service/authService.js
 import api from "./api"; // Usar la configuración centralizada
+import { API_ENDPOINTS } from "./config";
 
 // Función de login
-export const loginUser = async (email, password) => {
-    const response = await api.post('/api/login/auth', { email, password });
+export const loginUser = async (email, clave1) => {
+    const response = await api.post('/api/login/auth', { email, clave1 });
 
   // Si el login es exitoso, guardar el token
   if (response.data.token) {

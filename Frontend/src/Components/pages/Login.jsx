@@ -32,9 +32,12 @@ function Login() {
             
             console.log('Login exitoso:', response);
             setError('¡Bienvenido de nuevo!');
-            
-            // Aquí podrías guardar el token (localStorage) o redireccionar
-            // window.location.href = '/home';
+
+            if (response?.token) {
+                localStorage.setItem("token", response.token);
+            }
+
+            navigate('/proyectos', { replace: true });
 
         } catch (err) {
             console.error('Error en la petición:', err);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "../../Service/authService";
 import Navbar from "../Organism/Navbar";
 import Footer from "../Organism/Footer";
@@ -50,9 +50,12 @@ export default function CrearCuenta() {
 
       const response = await registerUser(userData)
       console.log('Registro exitoso:', response)
-      
-    
-      navigate('/') 
+
+      if (response?.token) {
+        localStorage.setItem("token", response.token);
+      }
+
+      navigate('/login', { replace: true }) 
       
     } catch (err) {
       console.error("Error al registrar:", err);
@@ -185,17 +188,6 @@ export default function CrearCuenta() {
                   disabled={loading}
                 >
                   {loading ? "Procesando..." : "Crear Cuenta"}
-                </button>
-
-                <div className="divider">o</div>
-                
-                <button type="button" className="btn-google" disabled={loading}>
-                  <img
-                    className="hero-image"
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-                    alt="Gmail"
-                  />
-                  Registrarse con Gmail
                 </button>
 
                 {error && <p className="error-message">{error}</p>}

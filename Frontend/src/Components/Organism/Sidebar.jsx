@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from '../../Service/authService'
 import '../Style/Sidebar.css'
@@ -7,7 +8,7 @@ function Sidebar() {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate('/');
   };
 
   return (
