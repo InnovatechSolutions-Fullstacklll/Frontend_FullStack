@@ -82,7 +82,7 @@ describe('Login', () => {
     expect(authService.loginUser).toHaveBeenCalledWith('admin@ejemplo.com', '1234')
     expect(await screen.findByText('¡Bienvenido de nuevo!')).toBeInTheDocument()
     expect(localStorage.getItem('token')).toBe('jwt-token-valido')
-    expect(mockNavigate).toHaveBeenCalledWith('/proyectos')
+    expect(mockNavigate).toHaveBeenCalledWith('/proyectos', { replace: true })
   })
 
   it('realiza el login exitoso pero no guarda token si la respuesta no lo incluye', async () => {
@@ -102,7 +102,7 @@ describe('Login', () => {
 
     expect(await screen.findByText('¡Bienvenido de nuevo!')).toBeInTheDocument()
     expect(localStorage.getItem('token')).toBeNull()
-    expect(mockNavigate).toHaveBeenCalledWith('/proyectos')
+    expect(mockNavigate).toHaveBeenCalledWith('/proyectos', { replace: true })
   })
 
   it('muestra mensaje de credenciales incorrectas (Error 401)', async () => {

@@ -1,4 +1,4 @@
-﻿﻿import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../Service/authService"; // Asegúrate de crear este archivo
 import Navbar from "../Organism/Navbar";
@@ -26,44 +26,40 @@ function Login() {
       return;
     }
 
-    try {
-      // Llamada al BFF (puerto 8082) que redirige al microservicio de Login (8081)
-      console.log(email, clave1);
-      const response = await loginUser(email, clave1);
+        try {
+            // Llamada al BFF (puerto 8082) que redirige al microservicio de Login (8081)
+            const response = await loginUser(email, clave1);
+            
+            console.log('Login exitoso:', response);
+            setError('¡Bienvenido de nuevo!');
 
-      console.log("Login exitoso:", response);
-      setError("¡Bienvenido de nuevo!");
+            if (response?.token) {
+                localStorage.setItem("token", response.token);
+            }
 
-      // Guardar token si viene en la respuesta (loginUser ya lo guarda, esto es por seguridad)
-      if (response?.token) {
-        localStorage.setItem("token", response.token);
-      }
+            navigate('/proyectos', { replace: true });
 
-      // Redirigir a proyectos tras login exitoso
-      navigate("/proyectos");
-    } catch (err) {
-      console.error("Error en la petición:", err);
-
-      // Manejo dinámico de errores
-      if (err.response) {
-        // El servidor respondió con un error (401, 404, 500, etc.)
-        if (err.response.status === 401) {
-          setError("Credenciales incorrectas. Intenta de nuevo.");
-        } else {
-          setError("Error en el servidor: " + err.response.status);
+        } catch (err) {
+            console.error('Error en la petición:', err);
+            
+            // Manejo dinámico de errores
+            if (err.response) {
+                // El servidor respondió con un error (401, 404, 500, etc.)
+                if (err.response.status === 401) {
+                    setError('Credenciales incorrectas. Intenta de nuevo.');
+                } else {
+                    setError('Error en el servidor: ' + err.response.status);
+                }
+            } else if (err.request) {
+                // La petición se hizo pero no hubo respuesta (BFF apagado o problema de red)
+                setError('No se pudo conectar con el servidor. Verifica que el BFF esté encendido.');
+            } else {
+                setError('Ocurrió un error inesperado.');
+            }
+        } finally {
+            setLoading(false);
         }
-      } else if (err.request) {
-        // La petición se hizo pero no hubo respuesta (BFF apagado o problema de red)
-        setError(
-          "No se pudo conectar con el servidor. Verifica que el BFF esté encendido.",
-        );
-      } else {
-        setError("Ocurrió un error inesperado.");
-      }
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
 
   const handleBack = () => {
     window.history.back();
@@ -142,20 +138,24 @@ function Login() {
                   </a>
                 </div>
 
-                <button type="submit" className="btn-login" disabled={loading}>
-                  {loading ? "Conectando..." : "Ingresar"}
-                </button>
-
-                <div className="divider">o</div>
-
-                <button type="button" className="btn-google" disabled={loading}>
-                  <img
-                    className="hero-image"
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-                    alt="Gmail"
-                  />
-                  Iniciar con Gmail
-                </button>
+                                <button 
+                                    type="submit" 
+                                    className="btn-login" 
+                                    disabled={loading}
+                                >
+                                    {loading ? 'Conectando...' : 'Ingresar'}
+                                </button>
+                                
+                                <div className="divider">o</div>
+                                
+                                <button type="button" className="btn-google" disabled={loading}>
+                                    <img
+                                        className="hero-image"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                                        alt="Gmail"
+                                    />
+                                    Iniciar con Gmail
+                                </button>
 
                 {error && (
                   <p

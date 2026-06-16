@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Navbar from "../Organism/Navbar";
 import Footer from "../Organism/Footer";
 import Sidebar from "../Organism/Sidebar";
@@ -51,7 +51,7 @@ const months = [
   "Dic",
 ];
 
-function getMetricsFromResponse(data) {
+export function getMetricsFromResponse(data) {
   if (Array.isArray(data)) return data;
   if (Array.isArray(data?.metrics)) return data.metrics;
   if (Array.isArray(data?.metricas)) return data.metricas;
@@ -59,20 +59,20 @@ function getMetricsFromResponse(data) {
   return null;
 }
 
-function parseTextList(value) {
+export function parseTextList(value) {
   return String(value)
     .split(",")
     .map((item) => item.trim())
     .filter(Boolean);
 }
 
-function parseNumberList(value) {
+export function parseNumberList(value) {
   return parseTextList(value)
     .map((item) => Number(item))
     .filter((item) => !Number.isNaN(item));
 }
 
-function normalizeMetric(metric) {
+export function normalizeMetric(metric) {
   return {
     id: metric.id ?? null,
     logrosCompletados: Number(metric.logrosCompletados ?? 0),

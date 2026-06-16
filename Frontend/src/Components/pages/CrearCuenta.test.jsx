@@ -148,9 +148,14 @@ describe('CrearCuenta', () => {
     const submitButton = screen.getAllByRole('button', { name: /Crear Cuenta/i }).find(b => b.getAttribute('type') === 'submit')
     await user.click(submitButton)
 
-    expect(authService.registerUser).toHaveBeenCalled()
+    expect(authService.registerUser).toHaveBeenCalledWith({
+      nombre: 'Test User',
+      email: 'test@example.com',
+      clave1: 'pass1234',
+      clave2: 'pass1234',
+    })
     expect(localStorage.getItem('token')).toBe('mock-jwt-token')
-    expect(mockNavigate).toHaveBeenCalledWith('/login')
+    expect(mockNavigate).toHaveBeenCalledWith('/login', { replace: true })
   })
 
   it('registra exitosamente sin devolver token y navega al login', async () => {
@@ -173,9 +178,14 @@ describe('CrearCuenta', () => {
     const submitButton = screen.getAllByRole('button', { name: /Crear Cuenta/i }).find(b => b.getAttribute('type') === 'submit')
     await user.click(submitButton)
 
-    expect(authService.registerUser).toHaveBeenCalled()
+    expect(authService.registerUser).toHaveBeenCalledWith({
+      nombre: 'Test User',
+      email: 'test@example.com',
+      clave1: 'pass1234',
+      clave2: 'pass1234',
+    })
     expect(localStorage.getItem('token')).toBeNull()
-    expect(mockNavigate).toHaveBeenCalledWith('/login')
+    expect(mockNavigate).toHaveBeenCalledWith('/login', { replace: true })
   })
 
   it('muestra mensaje de error del backend si registerUser responde con error y err.response', async () => {

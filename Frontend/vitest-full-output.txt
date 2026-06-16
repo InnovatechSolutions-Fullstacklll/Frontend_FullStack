@@ -1,0 +1,174 @@
+
+[7m[1m[36m RUN [39m[22m[27m [36mv1.6.1[39m [90mc:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend[39m
+
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mshould create axios instance with correct configuration
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mshould have request interceptor configured
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mshould have response interceptor configured
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mrequest interceptor should add Authorization header when token exists
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mrequest interceptor should return config when no token exists
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mresponse interceptor should handle 401, 403 and 5xx errors
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mresponse interceptor returns response unchanged on success
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mrequest interceptor rejects errors during request setup
+ [32m✓[39m src/Service/__tests__/config.test.js[2m > [22mConfiguration[2m > [22mshould use development API URL by default
+ [32m✓[39m src/Service/__tests__/config.test.js[2m > [22mConfiguration[2m > [22mshould use development API URL when NODE_ENV is development
+ [32m✓[39m src/Service/__tests__/config.test.js[2m > [22mConfiguration[2m > [22mshould use production API URL when NODE_ENV is production
+ [32m✓[39m src/Service/__tests__/config.test.js[2m > [22mConfiguration[2m > [22mshould export API_BASE_URL
+ [32m✓[39m src/__tests__/simple.test.js[2m > [22mSimple Test[2m > [22mshould pass
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mloginUser[2m > [22mshould login user successfully and store token
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mloginUser[2m > [22mshould throw error on login failure
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mregisterUser[2m > [22mshould register user successfully
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mregisterUser[2m > [22mshould throw error on registration failure
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mother methods[2m > [22mgetUserProfile should fetch profile data
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mother methods[2m > [22misAuthenticated and logout behavior
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mother methods[2m > [22misAuthenticated returns false when no token
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mother methods[2m > [22mloginUser does not store token if response has no token
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m1. Renderiza la página Home en la ruta raíz (/)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m2. Renderiza la página Login en la ruta (/login)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m3. Renderiza la página CrearCuenta en la ruta (/crear-cuenta)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m4. Renderiza la página Metricas en la ruta (/metricas)
+ [32m✓[39m src/Components/Organism/Footer.test.jsx[2m > [22mFooter[2m > [22mdebe renderizar el texto del footer correctamente
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m5. Renderiza la página Proyectos en la ruta estándar (/proyectos)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m6. Renderiza la página Proyectos en la ruta con typo intencional (/proytectos)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m7. Renderiza la página Perfil en la ruta en inglés (/profile)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m8. Renderiza la página Configuracion en la ruta (/settings)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m9. Cae en la página de Proyectos (Fallback) si se introduce cualquier ruta no existente (*)
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mrenderiza el formulario de crear cuenta
+ [32m✓[39m src/Components/Organism/Sidebar.test.jsx[2m > [22mSidebar[2m > [22mdebe renderizar los enlaces correctos y cerrar sesión
+ [32m✓[39m src/Components/Organism/Sidebar.test.jsx[2m > [22mSidebar[2m > [22mdebe llamar a logout y redirigir al home cuando se presiona cerrar sesión
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe parsear correctamente listas de texto y números
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe normalizar métricas con valores mixtos
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe extraer métricas de las diferentes formas de respuesta
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe mostrar mensaje de error cuando la API falla al cargar métricas
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m1. Renderiza los valores por defecto cuando el localStorage está vacío
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m2. Combina los datos de user y userProfile priorizando userProfile
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m3. Captura el error en el catch de getStoredProfile si el JSON está corrupto
+ [32m✓[39m src/Components/pages/Home.test.jsx[2m > [22mHome[2m > [22mVISTA SIN LOGUEAR: debe renderizar la sección Hero con sus botones e ilustración
+ [32m✓[39m src/Components/pages/Home.test.jsx[2m > [22mHome[2m > [22mVISTA LOGUEADA: debe renderizar el Sidebar y el panel privado del dashboard
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mmuestra las opciones principales de configuracion con valores por defecto
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mrenderiza el formulario de login correctamente
+ [32m✓[39m src/Components/Organism/Navbar.test.jsx[2m > [22mNavbar[2m > [22mdebe renderizar el logo corporativo y el nombre de la marca
+ [32m✓[39m src/Components/Organism/Navbar.test.jsx[2m > [22mNavbar[2m > [22mdebe mostrar siempre los botones de Login y Crear Cuenta
+ [32m✓[39m src/Components/Organism/Navbar.test.jsx[2m > [22mNavbar[2m > [22mdebe tener las redirecciones correctas en los enlaces
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m1. Carga inicial y renderizado del resumen de métricas (Proyectos Locales por falla de API)
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m2. Soporta formatos polimórficos de la API (.projects, .proyectos, .data, arrays directos)
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe permitir crear nuevas métricas y mostrar mensaje de éxito
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m3. Retorna null en getProjectsFromResponse si la data de la respuesta es inválida
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra error si el nombre es muy corto[33m 648[2mms[22m[39m
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mguarda las preferencias modificadas en localStorage al enviar el formulario
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mdebe cargar configuraciones previas si existen en localStorage
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mdebe utilizar defaultSettings si el localStorage contiene JSON inválido (Cubre bloque catch)
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mdebe utilizar defaultSettings si localStorage lanza una excepción grave en el acceso
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra error de email inválido sin llamar al servicio[33m 358[2mms[22m[39m
+[90mstdout[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mguarda el token en localStorage y redirige a /proyectos tras un login exitoso[22m[39m
+Login exitoso: { token: [32m'jwt-token-valido'[39m }
+
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mguarda el token en localStorage y redirige a /proyectos tras un login exitoso
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m4. Permite modificar los campos mediante handleChange y persistirlos al hacer submit[33m 789[2mms[22m[39m
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m5. Maneja correctamente nombres con múltiples espacios consecutivos para las iniciales del avatar
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m4. Abre/Cierra el formulario y bloquea la creación si el usuario no está autenticado[33m 530[2mms[22m[39m
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra error si el email no es válido[33m 533[2mms[22m[39m
+[90mstdout[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mrealiza el login exitoso pero no guarda token si la respuesta no lo incluye[22m[39m
+Login exitoso: {}
+
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mrealiza el login exitoso pero no guarda token si la respuesta no lo incluye[33m 308[2mms[22m[39m
+[90mstdout[2m | src/Components/pages/Proyectos.test.jsx[2m > [22m[2mComponente Proyectos[2m > [22m[2m5. Envía el payload correctamente serializado y actualiza la lista tras una creación exitosa[22m[39m
+Creating project payload: {
+  nombre: [32m'Cloud Platform'[39m,
+  area: [32m'DevOps'[39m,
+  estado: [32m'Activo'[39m,
+  tecnologia: [32m'["AWS","Docker"]'[39m,
+  integrantes: [ [33m10[39m ]
+}
+Create project response: {
+  id: [33m999[39m,
+  nombre: [32m'Cloud Platform'[39m,
+  integrantes: [33m10[39m,
+  tecnologia: [ [32m'AWS'[39m, [32m'Docker'[39m ],
+  estado: [32m'Activo'[39m,
+  area: [32m'DevOps'[39m
+}
+
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m5. Envía el payload correctamente serializado y actualiza la lista tras una creación exitosa[33m 549[2mms[22m[39m
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra error si las contraseñas no coinciden[33m 475[2mms[22m[39m
+[90mstderr[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mmuestra mensaje de credenciales incorrectas (Error 401)[22m[39m
+Error en la petición: { response: { status: [33m401[39m } }
+
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra mensaje de credenciales incorrectas (Error 401)[33m 354[2mms[22m[39m
+[90mstdout[2m | src/Components/pages/Proyectos.test.jsx[2m > [22m[2mComponente Proyectos[2m > [22m[2m6. Maneja de manera exhaustiva las respuestas de error dinámicas enviadas por el backend[22m[39m
+Creating project payload: {
+  nombre: [32m'Error Prueba'[39m,
+  area: [32m'QA'[39m,
+  estado: [32m'Planificado'[39m,
+  tecnologia: [32m'["Go"]'[39m,
+  integrantes: [ [33m1[39m ]
+}
+Error response body: { message: [32m'Nombre duplicado en el sistema'[39m }
+
+[90mstderr[2m | src/Components/pages/Proyectos.test.jsx[2m > [22m[2mComponente Proyectos[2m > [22m[2m6. Maneja de manera exhaustiva las respuestas de error dinámicas enviadas por el backend[22m[39m
+Error creando proyecto: {
+  response: { status: [33m400[39m, data: { message: [32m'Nombre duplicado en el sistema'[39m } }
+}
+
+[90mstderr[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mmuestra error genérico del servidor cuando el status no es 401[22m[39m
+Error en la petición: { response: { status: [33m500[39m } }
+
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m6. Maneja de manera exhaustiva las respuestas de error dinámicas enviadas por el backend[33m 374[2mms[22m[39m
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m7. Desasocia el componente en el desmontaje (Unmount) cancelando la subscripción de isMounted
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra error genérico del servidor cuando el status no es 401[33m 303[2mms[22m[39m
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra error si no acepta los términos[33m 458[2mms[22m[39m
+[90mstderr[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mmuestra error de conexión cuando la petición se hizo pero no hubo respuesta (BFF apagado)[22m[39m
+Error en la petición: { request: {} }
+
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra error de conexión cuando la petición se hizo pero no hubo respuesta (BFF apagado)
+[90mstderr[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mmuestra un error inesperado si la promesa falla sin response ni request[22m[39m
+Error en la petición: Error: Crash
+    at [90mc:\Users\Cristopher\Downloads\fulsjsjsjs\Frontend_FullStack\Frontend\[39msrc\Components\pages\Login.test.jsx:157:49
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:135:14
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:60:26
+    at runTest (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:781:17)
+    at runSuite (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:909:15)
+    at runSuite (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:909:15)
+    at runFiles (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:958:5)
+    at startTests (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:967:3)
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+    at withEnv (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:83:5)
+
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra un error inesperado si la promesa falla sin response ni request
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mejecuta window.history.back al hacer click en el botón Volver
+[90mstdout[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mregistra exitosamente, guarda el token si viene en la respuesta y navega al login[22m[39m
+Registro exitoso: { token: [32m'mock-jwt-token'[39m }
+
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mregistra exitosamente, guarda el token si viene en la respuesta y navega al login[33m 519[2mms[22m[39m
+[90mstdout[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mregistra exitosamente sin devolver token y navega al login[22m[39m
+Registro exitoso: {}
+
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mregistra exitosamente sin devolver token y navega al login[33m 548[2mms[22m[39m
+[90mstderr[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mmuestra mensaje de error del backend si registerUser responde con error y err.response[22m[39m
+Error al registrar: { response: { data: { message: [32m'Email ya registrado'[39m } } }
+
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra mensaje de error del backend si registerUser responde con error y err.response[33m 533[2mms[22m[39m
+[90mstderr[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mmuestra mensaje de error de backend por defecto si no hay message en la respuesta[22m[39m
+Error al registrar: { response: { data: {} } }
+
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra mensaje de error de backend por defecto si no hay message en la respuesta[33m 592[2mms[22m[39m
+[90mstderr[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mmuestra mensaje de conexión si registerUser lanza sin response[22m[39m
+Error al registrar: Error: Network Error
+    at [90mc:\Users\Cristopher\Downloads\fulsjsjsjs\Frontend_FullStack\Frontend\[39msrc\Components\pages\CrearCuenta.test.jsx:229:26
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:135:14
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:60:26
+    at runTest (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:781:17)
+    at runSuite (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:909:15)
+    at runSuite (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:909:15)
+    at runFiles (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:958:5)
+    at startTests (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:967:3)
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+    at withEnv (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:83:5)
+
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra mensaje de conexión si registerUser lanza sin response[33m 533[2mms[22m[39m
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mllama history.back cuando se presiona el botón Volver
+
+[2m Test Files [22m [1m[32m15 passed[39m[22m[90m (15)[39m
+[2m      Tests [22m [1m[32m80 passed[39m[22m[90m (80)[39m
+[2m   Start at [22m 01:39:03
+[2m   Duration [22m 8.40s[2m (transform 1.43s, setup 6.02s, collect 12.29s, tests 12.41s, environment 19.55s, prepare 6.13s)[22m
+
