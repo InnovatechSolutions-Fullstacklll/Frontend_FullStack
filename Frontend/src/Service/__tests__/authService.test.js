@@ -3,6 +3,7 @@
 vi.mock('../api', () => ({
   default: {
     post: vi.fn(),
+    get: vi.fn(),
   },
 }));
 
@@ -36,10 +37,9 @@ describe('Auth Service', () => {
       api.post.mockResolvedValue(mockResponse);
 
       const result = await loginUser('test@example.com', 'password123');
-
       expect(api.post).toHaveBeenCalledWith('/api/login/auth', {
         email: 'test@example.com',
-        password: 'password123',
+        clave1: 'password123',
       });
       expect(localStorage.setItem).toHaveBeenCalledWith('token', 'fake-jwt-token');
       expect(result).toEqual(mockResponse.data);
@@ -60,9 +60,10 @@ describe('Auth Service', () => {
       const { registerUser } = await import('../authService');
       const api = (await import('../api')).default;
       const userData = {
+        nombre: 'New User',
         email: 'newuser@example.com',
-        password: 'password123',
-        name: 'New User',
+        clave1: 'password123',
+        clave2: 'password123',
       };
 
       const mockResponse = {
@@ -94,4 +95,45 @@ describe('Auth Service', () => {
       await expect(registerUser(userData)).rejects.toThrow('User already exists');
     });
   });
+
+  describe('other methods', () => {
+    it('getUserProfile should fetch profile data', async () => {
+      const { getUserProfile } = await import('../authService')
+      const api = (await import('../api')).default
+      const mockResp = { data: { nombre: 'Juan', email: 'juan@example.com' } }
+      api.get.mockResolvedValue(mockResp)
+
+      const result = await getUserProfile()
+      expect(api.get).toHaveBeenCalledWith('/api/user/profile')
+      expect(result).toEqual(mockResp.data)
+    })
+
+    it('isAuthenticated and logout behavior', async () => {
+      const { isAuthenticated, logout } = await import('../authService')
+      localStorage.getItem.mockReturnValue('tok')
+      expect(isAuthenticated()).toBe(true)
+
+      logout()
+      expect(localStorage.removeItem).toHaveBeenCalledWith('token')
+    })
+
+    it('isAuthenticated returns false when no token', async () => {
+      const { isAuthenticated } = await import('../authService')
+      localStorage.getItem.mockReturnValue(null)
+      expect(isAuthenticated()).toBe(false)
+    })
+
+    it('loginUser does not store token if response has no token', async () => {
+      const { loginUser } = await import('../authService')
+      const api = (await import('../api')).default
+
+      const mockResponse = { data: { user: { id: 1, email: 'notoken@example.com' } } }
+      api.post.mockResolvedValue(mockResponse)
+
+      const result = await loginUser('notoken@example.com', 'password')
+      expect(api.post).toHaveBeenCalledWith('/api/login/auth', { email: 'notoken@example.com', clave1: 'password' })
+      expect(localStorage.setItem).not.toHaveBeenCalled()
+      expect(result).toEqual(mockResponse.data)
+    })
+  })
 });

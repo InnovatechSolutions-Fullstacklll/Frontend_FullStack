@@ -1,166 +1,153 @@
-﻿/* =========================
-   LOGIN GENERAL
-========================= */
-
-*{
+﻿/* ==========================================
+   RESET
+========================================== */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.login-container{
+/* ==========================================
+   LAYOUT PRINCIPAL
+========================================== */
+.login-container {
   width: 100%;
-  min-height: 100vh;
-  background: #020b1c;
+  min-height: calc(128vh - 120px);
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  font-family: 'Poppins', sans-serif;
+  background: #020b1c;
+  font-family: "Poppins", sans-serif;
 }
 
-/* =========================
-   CARD PRINCIPAL
-========================= */
 
-.login-card{
+/* ==========================================
+   CARD LOGIN
+========================================== */
+.login-card {
   width: 950px;
   min-height: 560px;
-  background: #ffffff;
-  border-radius: 30px;
-  border: 3px solid #1d1d1d;
+  max-height: 85vh;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  background: #fff;
+  border: 3px solid #1d1d1d;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* =========================
-   LADO IZQUIERDO
-========================= */
 
-.login-welcome{
+/* ==========================================
+   PANEL IZQUIERDO
+========================================== */
+.login-welcome {
   width: 50%;
   padding: 40px 35px;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
 
-.back-arrow{
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  border: none;
-  background: transparent;
-  font-size: 30px;
-  cursor: pointer;
+
+.login-welcome h1 {
+  margin-bottom: 30px;
   color: #000;
-  transition: 0.3s;
-}
-
-.back-arrow:hover{
-  transform: translateX(-5px);
-}
-
-.login-welcome h1{
+  font-family: "Anton", sans-serif;
   font-size: 60px;
+  font-weight: 900;
+  font-size: 44px;
   line-height: 0.95;
   text-align: center;
-  font-weight: 900;
-  color: #000;
-  margin-bottom: 30px;
   text-transform: uppercase;
-  font-family: 'Anton', sans-serif;
 }
-.welcome-image-placeholder{
-  width: 100%;
+
+
+/* Ubicación exacta en la esquina inferior izquierda - Más pequeño y estilizado */
+.back-arrow {
+  position: absolute;
+  bottom: 25px;
+  left: 35px;
+  border: none;
+  background: transparent;
+  font-family: "Poppins", sans-serif; /* Asegura que herede la tipografía limpia */
+  font-size: 14px; /* Tamaño reducido y más sutil */
+  font-weight: 600; /* Le da cuerpo a las letras */
+  color: #555; /* Un tono gris oscuro para que sea elegante y no compita con el logo */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  gap: 5px; /* Separa la flecha de la palabra internamente */
 }
 
-.temp-illustration{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.back-arrow:hover {
+  transform: translateX(-3px); /* Movimiento más corto y suave por ser más pequeño */
+  color: #8f00ff; /* Cambio al color morado característico */
+}
+/* ==========================================
+   ILUSTRACIÓN
+========================================== */
+.welcome-image-placeholder {
+  margin: 20px 0 35px;
+  max-height: 220px;
 }
 
-/* IMAGEN */
 
-.temp-illustration img{
-  width: 380px;
-  max-width: 100%;
+.temp-illustration img {
+  width: 400px;
+  max-width: 200%;
   object-fit: contain;
   animation: floatImage 3s ease-in-out infinite;
 }
 
 
-/* Logo abajo */
-
-.brand-footer{
+/* ==========================================
+   BRANDING
+========================================== */
+.brand-footer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
-.brand-logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.brand-logo img{
+.brand-logo img {
   width: 50px;
   height: 50px;
 }
-.brand-name{
+
+
+.brand-name {
+  padding: 1rem;
   font-size: 10px;
   font-weight: 600;
-  background: linear-gradient(90deg,#8f00ff,#ff7300);
+  background: linear-gradient(90deg, #8f00ff, #ff7300);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 1rem;
 }
 
-/* =========================
-   FORMULARIO
-========================= */
 
-.login-form-section{
+/* ==========================================
+   FORMULARIO
+========================================== */
+.login-form-section {
   width: 50%;
   padding: 35px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
 }
 
-.login-form-section form{
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
 
-.login-form-section h2{
-  text-align: center;
-  font-size: 52px;
-  margin-bottom: 30px;
-  font-weight: 800;
-  color: #000;
-}
-
-.login-form-section h2 span{
-  color: #ff7300;
-}
-
-.login-form-section::before{
+.login-form-section::before {
   content: "";
   position: absolute;
   inset: 18px;
@@ -169,216 +156,377 @@
   pointer-events: none;
 }
 
-/* Inputs */
 
-.input-group{
-  margin-bottom: 22px;
+.login-form-section form {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
-.input-group label{
+
+.login-form-section h2 {
+  margin-bottom: 30px;
+  color: #000;
+  font-size: 52px;
+  font-weight: 800;
+  text-align: center;
+}
+
+
+.login-form-section h2 span {
+  color: #ff7300;
+}
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+.input-group {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 22px;
+}
+
+
+.input-group label {
   display: block;
   margin-bottom: 8px;
   color: #666;
   font-size: 16px;
 }
 
-.input-group input{
+
+.input-group input {
   width: 100%;
   padding: 16px 22px;
-  border-radius: 50px;
   border: 2px solid transparent;
-  background: linear-gradient(90deg, #8f00ff, #ff7300);
+  border-radius: 50px;
   outline: none;
   font-size: 15px;
-  transition: 0.3s;
   color: #333;
+  background: linear-gradient(90deg, #8f00ff, #ff7300);
+  transition: 0.3s;
 }
 
-.input-group input::placeholder{
+
+.input-group input::placeholder {
   color: #999;
 }
 
-.input-group input:focus{
-  background: linear-gradient(90deg, #8f00ff, #ff7300);
-  border-color: #8f00ff;
-  box-shadow: 0 0 10px rgba(143,0,255,0.25);
+
+.input-group input:focus {
   color: #fff;
+  border-color: #8f00ff;
+  box-shadow: 0 0 10px rgba(143, 0, 255, 0.25);
 }
 
 
-.input-group input[type="password"]{
+/* Ajustes específicos para password sin sobreescribir innecesariamente */
+.input-group input[type="password"] {
   background: linear-gradient(90deg, #f0e6ff, #ffe6cc);
-  border: 2px solid transparent;
-  color: #333;
 }
 
-.input-group input[type="password"]:focus{
-  background: linear-gradient(90deg, #8f00ff, #ff7300);
-  border-color: #8f00ff;
-  box-shadow: 0 0 10px rgba(143,0,255,0.25);
+
+.input-group input[type="password"]:focus {
   color: #fff;
+  border-color: #8f00ff;
+  background: linear-gradient(90deg, #8f00ff, #ff7300);
+  box-shadow: 0 0 10px rgba(143, 0, 255, 0.25);
 }
 
-/* =========================
+
+/* ==========================================
    OPCIONES
-========================= */
-
-.form-options{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.forgot-password{
-  text-decoration: none;
+========================================== */
+.forgot-password {
   color: #8d8d8d;
   font-size: 14px;
   text-align: center;
+  text-decoration: none;
 }
 
-.checkbox-container{
+
+.checkbox-container {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
   color: #222;
+  font-size: 13px;
 }
 
-.checkbox-container input{
+
+.checkbox-container input {
   accent-color: #71d3c5;
 }
 
-/* =========================
-   BOTONES
-========================= */
 
-.btn-login{
+/* ==========================================
+   BOTONES
+========================================== */
+.btn-login {
   width: 100%;
   padding: 15px;
-  border: none;
-  border-radius: 10px;
-  background: #ff7300;
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.3s;
   margin-bottom: 20px;
   position: relative;
   z-index: 2;
-}
-
-.btn-login:hover{
-  transform: scale(1.02);
-  background: #eb6a00;
-}
-
-.error-message{
-  color: #d32f2f;
-  font-size: 0.95rem;
-  text-align: center;
-  margin-top: 12px;
-  position: relative;
-  z-index: 2;
-}
-
-/* Divider */
-
-.divider{
-  text-align: center;
-  color: #999;
-  margin: 15px 0;
-  font-size: 14px;
-  position: relative;
-  z-index: 2;
-}
-
-.divider::before,
-.divider::after{
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 1px;
-  background: #bbb;
-  margin: 0 10px;
-  vertical-align: middle;
-}
-
-/* Google */
-
-.btn-google{
-  width: 100%;
-  padding: 13px;
+  border: none;
   border-radius: 10px;
-  border: 2px solid #6ad1c3;
-  background: white;
-  font-size: 18px;
+  background: #ff7300;
+  color: #fff;
+  font-size: 20px;
   font-weight: 700;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
   transition: 0.3s;
-  position: relative;
-  z-index: 2;
 }
 
-.btn-google:hover{
+
+.btn-login:hover {
+  background: #eb6a00;
   transform: scale(1.02);
 }
 
-.hero-image{
+
+.hero-image {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
 
-/* =========================
+
+/* ==========================================
+   MENSAJES Y DIVISORES
+========================================== */
+.error-message {
+  position: relative;
+  z-index: 2;
+  margin-top: 12px;
+  color: #d32f2f;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+
+.divider {
+  position: relative;
+  z-index: 2;
+  margin: 15px 0;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+.divider::before,
+.divider::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 1px;
+  margin: 0 10px;
+  vertical-align: middle;
+  background: #bbb;
+}
+
+
+/* ==========================================
    RESPONSIVE
-========================= */
-
-@media(max-width: 900px){
-
-  .login-card{
-    flex-direction: column;
-    width: 100%;
+========================================== */
+@media (max-width: 900px) {
+  .login-container {
+    min-height: 100vh;
+    padding: 15px;
   }
+
+
+  .login-card {
+    max-height: none;
+    flex-direction: column; /* Apila las secciones verticalmente */
+    border-radius: 20px;
+  }
+
 
   .login-welcome,
-  .login-form-section{
+  .login-form-section {
+    width: 100%; /* Ocupan todo el ancho */
+  }
+
+
+
+
+  .login-welcome {
+    padding: 20px 20px 10px; /* Reducimos paddings para que no ocupe tanto espacio */
+    display: flex;
+    flex-direction: row; /* ¡Magia! Pone el título y el logo lado a lado */
+    align-items: center; /* Los centra perfectamente de forma vertical */
+    justify-content: center; /* Los centra horizontalmente en la pantalla */
+    gap: 15px; /* Separa el texto del logo de forma limpia */
+  }
+
+
+  .login-welcome h1 {
+    font-size: px; /* Título de bienvenida más pequeño */
+    margin-bottom: 20px;
+  }
+
+
+  /* Ajustes para que la imagen actúe como un logo */
+  .welcome-image-placeholder {
+    max-height: 100px; /* Altura máxima reducida */
+    margin: 10px 0; /* Márgenes ajustados */
+    order: -1; /* Mueve la imagen arriba del todo */
+  }
+
+
+  .temp-illustration img {
+    width: 80px; /* Ancho mucho más pequeño, como un logo */
+    max-width: 100%;
+    animation: none; /* Opcional: quitar animación para que parezca más un logo estático */
+  }
+
+
+  /* Ajustes para el branding (Innovatech) */
+  .brand-footer {
+    order: 2; /* Mueve el branding abajo del todo de esta sección */
+    margin-top: 15px;
+  }
+
+
+  .brand-name {
+    font-size: 36px; /* ¡Letras de INNOVATECH mucho más grandes! */
+    padding: 10px 1rem; /* Padding ajustado */
+    font-weight: 800; /* Un poco más de peso */
+    text-align: center;
+  }
+
+
+  .login-form-section {
+    padding: 30px 25px;
+  }
+
+
+  .login-form-section::before {
+    inset: 8px;
+    border-width: 4px;
+  }
+
+
+  .login-form-section h2 {
+    font-size: 30px; /* Título del formulario más pequeño */
+    margin-bottom: 20px;
+   }
+}
+
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 900px) {
+  .login-container {
+    min-height: 100vh;
+    padding: 15px;
+    margin-top: 70px; /* Evita que el contenedor choque con el menú superior */
+  }
+
+
+  .login-card {
+    max-height: none;
+    flex-direction: column; /* Apila las secciones verticalmente */
+    border-radius: 20px;
+  }
+
+
+  .login-welcome,
+  .login-form-section {
+    width: 100%; /* Ocupan todo el ancho */
+  }
+
+
+  /* Contenedor de bienvenida centrado vertical y horizontalmente */
+  .login-welcome {
+    padding: 35px 20px 15px;
+    display: flex;
+    flex-direction: column; /* Apila Bienvenido arriba e Innovatech abajo */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Separación pequeña y limpia entre ambos textos */
+  }
+
+
+  /* El texto de Bienvenida perfectamente en el centro */
+  .login-welcome h1 {
+    font-size: 34px; /* Tamaño controlado para que no se coma la pantalla */
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+
+  /* Ocultamos la ilustración/imagen en movimiento por completo en móvil */
+  .welcome-image-placeholder {
+    display: none !important;
+  }
+
+
+  /* Ajustes para el branding centrado justo debajo */
+  .brand-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
 
-  .login-welcome h1{
-    font-size: 42px;
+
+  .brand-logo img {
+    display: none; /* Oculta el logo pequeño para dejar solo las letras limpias si lo deseas */
   }
 
-  .brand-name{
-    font-size: 38px;
+
+  /* Letras de Innovatech más grandes y centradas en la página */
+  .brand-name {
+    font-size: 38px; /* Tamaño destacado */
+    font-weight: 800;
+    padding: 5px 0;
+    text-align: center;
+    background: linear-gradient(90deg, #8f00ff, #ff7300);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  .login-form-section h2{
-    font-size: 40px;
+
+  /* Formulario inferior */
+  .login-form-section {
+    padding: 30px 25px;
+  }
+
+
+  .login-form-section::before {
+    inset: 8px;
+    border-width: 4px;
+  }
+
+
+  .login-form-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 }
 
 
-@keyframes floatImage{
-  0%{
-    transform: translateY(0px);
-  }
 
-  50%{
-    transform: translateY(-8px);
-  }
 
-  100%{
-    transform: translateY(0px);
-  }
-}
+
+

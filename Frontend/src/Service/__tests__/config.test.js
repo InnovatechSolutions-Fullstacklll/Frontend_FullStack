@@ -37,6 +37,14 @@ describe('Configuration', () => {
     expect(apiUrl).toBe('https://tu-api-produccion.com');
   });
 
+  it('should fall back to development config when NODE_ENV is unknown', async () => {
+    process.env.NODE_ENV = 'staging';
+
+    const { API_BASE_URL: apiUrl } = await import('../config');
+
+    expect(apiUrl).toBe('http://localhost:9090');
+  });
+
   it('should export API_BASE_URL', async () => {
     const { API_BASE_URL: apiUrl } = await import('../config');
 

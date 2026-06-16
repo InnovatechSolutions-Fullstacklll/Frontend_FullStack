@@ -1,46 +1,46 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { registerUser } from '../../Service/authService'
-import Navbar from '../Organism/Navbar'
-import Footer from '../Organism/Footer'
-import '../Style/CrearCuenta.css'
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { registerUser } from "../../Service/authService";
+import Navbar from "../Organism/Navbar";
+import Footer from "../Organism/Footer";
+import "../Style/CrearCuenta.css";
 import Logo from "../../assets/Logos/Logo.jpeg";
 import Fondo2 from "../../assets/Logos/Fondo2.jpeg";
 
 export default function CrearCuenta() {
-  const [nombre, setNombre] = useState('')
-  const [email, setEmail] = useState('')
-  const [clave1, setClave1] = useState('')
-  const [clave2, setClave2] = useState('')
-  const [aceptaTerminos, setAceptaTerminos] = useState(false)
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-  const navigate = useNavigate()
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [clave1, setClave1] = useState("");
+  const [clave2, setClave2] = useState("");
+  const [aceptaTerminos, setAceptaTerminos] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const validarFormulario = async (e) => {
-    e.preventDefault()
-    setError('')
+    e.preventDefault();
+    setError("");
 
     // 1. Validaciones locales
     if (nombre.length < 3) {
-      setError('El nombre debe tener al menos 3 caracteres')
-      return
+      setError("El nombre debe tener al menos 3 caracteres");
+      return;
     }
-    if (!email.includes('@')) {
-      setError('El email debe ser válido')
-      return
+    if (!email.includes("@")) {
+      setError("El email debe ser válido");
+      return;
     }
     if (clave1 !== clave2) {
-      setError('Las contraseñas no coinciden')
-      return
+      setError("Las contraseñas no coinciden");
+      return;
     }
     if (!aceptaTerminos) {
-      setError('Debes aceptar los términos y condiciones')
-      return
+      setError("Debes aceptar los términos y condiciones");
+      return;
     }
 
     // 2. Envío de datos al Backend
-    setLoading(true)
+    setLoading(true);
     try {
       const userData = {
         nombre: nombre,
@@ -48,28 +48,34 @@ export default function CrearCuenta() {
         clave1: clave1,
         clave2: clave2
       }
-      console.log(userData);
+
       const response = await registerUser(userData)
       console.log('Registro exitoso:', response)
-      
-    
-      navigate('/') 
+
+      if (response?.token) {
+        localStorage.setItem("token", response.token);
+      }
+
+      navigate('/login', { replace: true }) 
       
     } catch (err) {
-      console.error('Error al registrar:', err)
+      console.error("Error al registrar:", err);
       if (err.response) {
-        setError(err.response.data.message || 'Error al crear la cuenta. Intenta con otro email.')
+        setError(
+          err.response.data.message ||
+            "Error al crear la cuenta. Intenta con otro email.",
+        );
       } else {
-        setError('No hay conexión con el servidor. Revisa tu BFF.')
+        setError("No hay conexión con el servidor. Revisa tu BFF.");
       }
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const handleBack = () => {
-    window.history.back()
-  }
+    window.history.back();
+  };
 
   return (
     <div className="register-page">
@@ -78,24 +84,26 @@ export default function CrearCuenta() {
         <div className="register-container">
           <div className="register-card">
             <section className="register-welcome">
-              <button type="button" className="back-arrow" onClick={handleBack} aria-label="Volver">
+              <button
+                type="button"
+                className="back-arrow"
+                onClick={handleBack}
+                aria-label="Volver"
+              >
                 ←
               </button>
-              <h1>Únete a <br />nosotros</h1>
+              <h1>
+                Únete a <br />
+                nosotros
+              </h1>
               <div className="welcome-image-placeholder">
                 <div className="temp-illustration">
-                  <img
-                    src={Fondo2}
-                    alt="Ilustración de registro"
-                  />
+                  <img src={Fondo2} alt="Ilustración de registro" />
                 </div>
               </div>
               <div className="brand-footer">
                 <div className="brand-logo">
-                  <img
-                    src={Logo}
-                    alt="Logo marca"
-                  />
+                  <img src={Logo} alt="Logo marca" />
                 </div>
                 <div className="brand-name">Innovatech</div>
               </div>
@@ -168,27 +176,19 @@ export default function CrearCuenta() {
                     required
                   />
                   <label htmlFor="terminos" className="terms-text">
-                    Acepto los <a href="/terminos" className="terms-link">términos y condiciones</a>
+                    Acepto los{" "}
+                    <a href="/terminos" className="terms-link">
+                      términos y condiciones
+                    </a>
                   </label>
                 </div>
 
-                <button 
-                  type="submit" 
-                  className="btn-register" 
+                <button
+                  type="submit"
+                  className="btn-register"
                   disabled={loading}
                 >
-                  {loading ? 'Procesando...' : 'Crear Cuenta'}
-                </button>
-
-                <div className="divider">o</div>
-                
-                <button type="button" className="btn-google" disabled={loading}>
-                  <img
-                    className="hero-image"
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-                    alt="Gmail"
-                  />
-                  Registrarse con Gmail
+                  {loading ? "Procesando..." : "Crear Cuenta"}
                 </button>
 
                 {error && <p className="error-message">{error}</p>}
@@ -199,5 +199,5 @@ export default function CrearCuenta() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

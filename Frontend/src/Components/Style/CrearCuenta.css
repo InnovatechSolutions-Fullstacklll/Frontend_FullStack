@@ -1,98 +1,104 @@
-/* =========================
-   REGISTRO GENERAL
-========================= */
+/* ==========================================
 
-*{
+ RESET
+========================================== */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.register-container{
+
+/* ==========================================
+   LAYOUT PRINCIPAL
+========================================== */
+.register-container {
   width: 100%;
-  min-height: 100vh;
-  background: #020b1c;
+  min-height: calc(128vh - 120px);
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  font-family: 'Poppins', sans-serif;
+  background: #020b1c;
+  font-family: "Poppins", sans-serif;
 }
 
-/* =========================
-   CARD PRINCIPAL
-========================= */
 
-.register-card{
+/* ==========================================
+   CARD REGISTRO
+========================================== */
+.register-card {
   width: 950px;
-  min-height: 600px;
-  background: #ffffff;
-  border-radius: 30px;
-  border: 3px solid #1d1d1d;
+  max-width: 960px;
+  max-height: 83vh;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  background: #fff;
+  border: 3px solid #1d1d1d;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* =========================
-   LADO IZQUIERDO
-========================= */
 
-.register-welcome{
+/* ==========================================
+   PANEL IZQUIERDO
+========================================== */
+.register-welcome {
   width: 50%;
   padding: 40px 35px;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
 
-.back-arrow{
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  border: none;
-  background: transparent;
-  font-size: 30px;
-  cursor: pointer;
+
+.register-welcome h1 {
+  margin-bottom: 30px;
   color: #000;
-  transition: 0.3s;
-}
-
-.back-arrow:hover{
-  transform: translateX(-5px);
-}
-
-.register-welcome h1{
-  font-size: 50px;
+  font-family: "Anton", sans-serif;
+  font-size: 44px;
+  font-weight: 900;
   line-height: 0.95;
   text-align: center;
-  font-weight: 900;
-  color: #000;
-  margin-bottom: 30px;
   text-transform: uppercase;
-  font-family: 'Anton', sans-serif;
 }
-.welcome-image-placeholder{
-  width: 100%;
+
+
+/* Ubicación exacta en la esquina inferior izquierda - Más pequeño y estilizado */
+.back-arrow {
+  position: absolute;
+  bottom: 25px;
+  left: 35px;
+  border: none;
+  background: transparent;
+  font-family: "Poppins", sans-serif; /* Asegura que herede la tipografía limpia */
+  font-size: 14px; /* Tamaño reducido y más sutil */
+  font-weight: 600; /* Le da cuerpo a las letras */
+  color: #555; /* Un tono gris oscuro para que sea elegante y no compita con el logo */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  gap: 5px; /* Separa la flecha de la palabra internamente */
 }
 
-.temp-illustration{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.back-arrow:hover {
+  transform: translateX(-3px); /* Movimiento más corto y suave por ser más pequeño */
+  color: #8f00ff; /* Cambio al color morado característico */
+}
+/* ==========================================
+   ILUSTRACIÓN
+========================================== */
+.welcome-image-placeholder {
+  margin: 10px 0 25px;
 }
 
-/* IMAGEN */
 
-.temp-illustration img{
+.temp-illustration img {
   width: 380px;
   max-width: 100%;
   object-fit: contain;
@@ -100,66 +106,47 @@
 }
 
 
-/* Logo abajo */
-
-.brand-footer{
+/* ==========================================
+   BRANDING
+========================================== */
+.brand-footer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
-.brand-logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.brand-logo img{
+.brand-logo img {
   width: 60px;
   height: 60px;
 }
-.brand-name{
-  font-size: 52px;
+
+
+.brand-name {
+  font-size: 28px;
   font-weight: 800;
-  background: linear-gradient(90deg,#8f00ff,#ff7300);
+  background: linear-gradient(90deg, #8f00ff, #ff7300);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* =========================
-   FORMULARIO
-========================= */
 
-.register-form-section{
+/* ==========================================
+   FORMULARIO
+========================================== */
+.register-form-section {
   width: 50%;
-  padding: 35px;
+  padding: 45px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  /* Se elimina el desborde y scroll interno que causaba el salto del cuadro */
 }
-
-.register-form-section form{
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.register-form-section h2{
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 25px;
-  font-weight: 800;
-  color: #000;
-}
-
-.register-form-section h2 span{
-  color: #8f00ff;
-}
-
-.register-form-section::before{
+.register-form-section::before {
   content: "";
   position: absolute;
   inset: 18px;
@@ -168,204 +155,302 @@
   pointer-events: none;
 }
 
-/* Inputs */
 
-.input-group{
-  margin-bottom: 18px;
+.register-form-section form {
+  width: 100%;
   position: relative;
   z-index: 2;
 }
 
-.input-group label{
+
+.register-form-section h2 {
+  margin-bottom: 25px;
+  color: #000;
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+}
+
+
+.register-form-section h2 span {
+  color: #8f00ff;
+}
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+.input-group {
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.input-group label {
   display: block;
   margin-bottom: 8px;
   color: #666;
   font-size: 16px;
 }
 
-.input-group input{
+
+.input-group input {
   width: 100%;
   padding: 14px 20px;
-  border-radius: 50px;
   border: 2px solid transparent;
-  background: #e7e7e7;
+  border-radius: 50px;
   outline: none;
+  background: #e7e7e7;
   font-size: 15px;
   transition: 0.3s;
 }
 
-.input-group input:focus{
+
+.input-group input:focus {
   border-color: #8f00ff;
-  box-shadow: 0 0 10px rgba(143,0,255,0.25);
+  box-shadow: 0 0 10px rgba(143, 0, 255, 0.25);
 }
 
-.input-group input[type="password"]{
-  background:
-    linear-gradient(#fff,#fff) padding-box,
-    linear-gradient(90deg,#8f00ff,#ff7300) border-box;
-  border: 2px solid transparent;
+
+/* Al hacer focus, todos toman tu gradiente característico */
+.input-group input:focus {
+  color: #fff;
+  border-color: #8f00ff;
+  background: linear-gradient(90deg, #8f00ff, #ff7300);
+  box-shadow: 0 0 12px rgba(143, 0, 255, 0.35);
 }
 
-/* =========================
-   TERMINOS Y CONDICIONES
-========================= */
 
-.terms-container{
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 13px;
-  color: #222;
+/* Quitamos la doble declaración confusa de contraseñas */
+.input-group input[type="password"] {
+  background: #f8fafc;
+}
+.input-group input[type="password"]:focus {
+  color: #fff;
+  background: linear-gradient(90deg, #8f00ff, #ff7300);
+}
+
+
+/* ==========================================
+   TÉRMINOS Y CONDICIONES
+========================================== */
+.terms-container {
   margin-bottom: 20px;
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #222;
+  font-size: 13px;
 }
 
-.terms-container input{
-  accent-color: #71d3c5;
+
+.terms-container input {
   margin-top: 2px;
+  accent-color: #71d3c5;
 }
 
-.terms-text{
+
+.terms-text {
   line-height: 1.4;
 }
 
-.terms-link{
+
+.terms-link {
   color: #8f00ff;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
-.terms-link:hover{
+
+.terms-link:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   BOTONES
-========================= */
 
-.btn-register{
+/* ==========================================
+   BOTONES
+========================================== */
+.btn-register {
   width: 100%;
   padding: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
   border: none;
   border-radius: 10px;
   background: #8f00ff;
-  color: white;
+  color: #fff;
   font-size: 26px;
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 2;
 }
 
-.btn-register:hover{
-  transform: scale(1.02);
+
+.btn-register:hover {
   background: #7a00e0;
-}
-
-.error-message{
-  color: #d32f2f;
-  font-size: 0.95rem;
-  text-align: center;
-  margin-top: 12px;
-  position: relative;
-  z-index: 2;
-}
-
-/* Divider */
-
-.divider{
-  text-align: center;
-  color: #999;
-  margin: 15px 0;
-  font-size: 14px;
-  position: relative;
-  z-index: 2;
-}
-
-.divider::before,
-.divider::after{
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 1px;
-  background: #bbb;
-  margin: 0 10px;
-  vertical-align: middle;
-}
-
-/* Google */
-
-.btn-google{
-  width: 100%;
-  padding: 13px;
-  border-radius: 10px;
-  border: 2px solid #6ad1c3;
-  background: white;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  transition: 0.3s;
-  position: relative;
-  z-index: 2;
-}
-
-.btn-google:hover{
   transform: scale(1.02);
 }
 
-.hero-image{
+
+.hero-image {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
-@media(max-width: 900px){
-
-  .register-card{
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .register-welcome,
-  .register-form-section{
-    width: 100%;
-  }
-
-  .register-welcome h1{
-    font-size: 38px;
-  }
-
-  .brand-name{
-    font-size: 38px;
-  }
-
-  .register-form-section h2{
-    font-size: 36px;
-  }
+/* ==========================================
+   MENSAJES Y DIVISORES
+========================================== */
+.error-message {
+  margin-top: 12px;
+  position: relative;
+  z-index: 2;
+  color: #d32f2f;
+  font-size: 0.95rem;
+  text-align: center;
 }
 
 
-@keyframes floatImage{
-  0%{
-    transform: translateY(0px);
-  }
+.divider {
+  margin: 15px 0;
+  position: relative;
+  z-index: 2;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+}
 
-  50%{
+
+.divider::before,
+.divider::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 1px;
+  margin: 0 10px;
+  vertical-align: middle;
+  background: #bbb;
+}
+
+
+
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
     transform: translateY(-8px);
   }
+}
 
-  100%{
-    transform: translateY(0px);
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 900px) {
+  .register-container {
+    min-height: 100vh;
+    padding: 15px;
+    margin-top: 70px;
+  }
+
+
+  .register-card {
+    max-height: none;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+
+  .register-welcome,
+  .register-form-section {
+    width: 100%;
+  }
+
+
+  .register-welcome {
+    padding: 35px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+
+  .register-welcome h1 {
+    font-size: 28px;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+
+  .welcome-image-placeholder {
+    display: inline-flex !important;
+    align-items: center;
+    max-height: 40px;
+    margin: 0;
+  }
+
+
+  .temp-illustration img {
+    width: 40px;
+    height: auto;
+    max-width: 100%;
+    animation: none;
+  }
+
+
+  .brand-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+
+  .brand-logo img {
+    display: none;
+  }
+
+
+  .brand-name {
+    font-size: 38px;
+    font-weight: 800;
+    padding: 5px 0;
+    text-align: center;
+  }
+
+
+  .register-form-section {
+    padding: 30px 25px;
+  }
+
+
+  .register-form-section::before {
+    inset: 8px;
+    border-width: 4px;
+  }
+
+
+  .register-form-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 }
+

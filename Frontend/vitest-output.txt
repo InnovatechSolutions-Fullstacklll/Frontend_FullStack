@@ -1,0 +1,1605 @@
+
+[7m[1m[36m RUN [39m[22m[27m [36mv1.6.1[39m [90mc:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend[39m
+
+ [32m✓[39m src/__tests__/simple.test.js[2m > [22mSimple Test[2m > [22mshould pass
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mshould create axios instance with correct configuration
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mloginUser[2m > [22mshould login user successfully and store token
+ [32m✓[39m src/Service/__tests__/config.test.js[2m > [22mConfiguration[2m > [22mshould use development API URL by default
+ [32m✓[39m src/Service/__tests__/config.test.js[2m > [22mConfiguration[2m > [22mshould use development API URL when NODE_ENV is development
+ [32m✓[39m src/Service/__tests__/config.test.js[2m > [22mConfiguration[2m > [22mshould use production API URL when NODE_ENV is production
+ [32m✓[39m src/Service/__tests__/config.test.js[2m > [22mConfiguration[2m > [22mshould export API_BASE_URL
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mshould have request interceptor configured
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mloginUser[2m > [22mshould throw error on login failure
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mregisterUser[2m > [22mshould register user successfully
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mshould have response interceptor configured
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mrequest interceptor should add Authorization header when token exists
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mrequest interceptor should return config when no token exists
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mresponse interceptor should handle 401, 403 and 5xx errors
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mregisterUser[2m > [22mshould throw error on registration failure
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mother methods[2m > [22mgetUserProfile should fetch profile data
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mother methods[2m > [22misAuthenticated and logout behavior
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mother methods[2m > [22misAuthenticated returns false when no token
+ [32m✓[39m src/Service/__tests__/authService.test.js[2m > [22mAuth Service[2m > [22mother methods[2m > [22mloginUser does not store token if response has no token
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mresponse interceptor returns response unchanged on success
+ [32m✓[39m src/Service/__tests__/api.test.js[2m > [22mAPI Configuration[2m > [22mrequest interceptor rejects errors during request setup
+ [32m✓[39m src/Components/Organism/Footer.test.jsx[2m > [22mFooter[2m > [22mdebe renderizar el texto del footer correctamente
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m1. Renderiza la página Home en la ruta raíz (/)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m2. Renderiza la página Login en la ruta (/login)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m3. Renderiza la página CrearCuenta en la ruta (/crear-cuenta)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m4. Renderiza la página Metricas en la ruta (/metricas)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m5. Renderiza la página Proyectos en la ruta estándar (/proyectos)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m6. Renderiza la página Proyectos en la ruta con typo intencional (/proytectos)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m7. Renderiza la página Perfil en la ruta en inglés (/profile)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m8. Renderiza la página Configuracion en la ruta (/settings)
+ [32m✓[39m src/App.test.jsx[2m > [22mPruebas de Cobertura Total para Enrutamiento (App.jsx)[2m > [22m9. Cae en la página de Proyectos (Fallback) si se introduce cualquier ruta no existente (*)
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe parsear correctamente listas de texto y números
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe normalizar métricas con valores mixtos
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe extraer métricas de las diferentes formas de respuesta
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe mostrar mensaje de error cuando la API falla al cargar métricas
+ [32m✓[39m src/Components/Organism/Sidebar.test.jsx[2m > [22mSidebar[2m > [22mdebe renderizar los enlaces correctos y cerrar sesión
+ [32m✓[39m src/Components/Organism/Sidebar.test.jsx[2m > [22mSidebar[2m > [22mdebe llamar a logout y redirigir al home cuando se presiona cerrar sesión
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mrenderiza el formulario de crear cuenta
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m1. Renderiza los valores por defecto cuando el localStorage está vacío
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m2. Combina los datos de user y userProfile priorizando userProfile
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m3. Captura el error en el catch de getStoredProfile si el JSON está corrupto
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mmuestra las opciones principales de configuracion con valores por defecto
+ [32m✓[39m src/Components/pages/Home.test.jsx[2m > [22mHome[2m > [22mVISTA SIN LOGUEAR: debe renderizar la sección Hero con sus botones e ilustración
+ [32m✓[39m src/Components/pages/Home.test.jsx[2m > [22mHome[2m > [22mVISTA LOGUEADA: debe renderizar el Sidebar y el panel privado del dashboard
+ [32m✓[39m src/Components/pages/Metricas.test.jsx[2m > [22mMetricas[2m > [22mdebe permitir crear nuevas métricas y mostrar mensaje de éxito
+ [32m✓[39m src/Components/Organism/Navbar.test.jsx[2m > [22mNavbar[2m > [22mdebe renderizar el logo corporativo y el nombre de la marca
+ [32m✓[39m src/Components/Organism/Navbar.test.jsx[2m > [22mNavbar[2m > [22mdebe mostrar siempre los botones de Login y Crear Cuenta
+ [32m✓[39m src/Components/Organism/Navbar.test.jsx[2m > [22mNavbar[2m > [22mdebe tener las redirecciones correctas en los enlaces
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m1. Carga inicial y renderizado del resumen de métricas (Proyectos Locales por falla de API)
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m2. Soporta formatos polimórficos de la API (.projects, .proyectos, .data, arrays directos)
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mguarda las preferencias modificadas en localStorage al enviar el formulario
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mdebe cargar configuraciones previas si existen en localStorage
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mdebe utilizar defaultSettings si el localStorage contiene JSON inválido (Cubre bloque catch)
+ [32m✓[39m src/Components/pages/Configuracion.test.jsx[2m > [22mConfiguracion[2m > [22mdebe utilizar defaultSettings si localStorage lanza una excepción grave en el acceso
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m3. Retorna null en getProjectsFromResponse si la data de la respuesta es inválida
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mrenderiza el formulario de login correctamente
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra error si el nombre es muy corto[33m 544[2mms[22m[39m
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra error de email inválido sin llamar al servicio[33m 325[2mms[22m[39m
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m4. Permite modificar los campos mediante handleChange y persistirlos al hacer submit[33m 818[2mms[22m[39m
+ [32m✓[39m src/Components/pages/Perfil.test.jsx[2m > [22mComponente Perfil[2m > [22m5. Maneja correctamente nombres con múltiples espacios consecutivos para las iniciales del avatar
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m4. Abre/Cierra el formulario y bloquea la creación si el usuario no está autenticado[33m 474[2mms[22m[39m
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra error si el email no es válido[33m 476[2mms[22m[39m
+[90mstdout[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mguarda el token en localStorage y redirige a /proyectos tras un login exitoso[22m[39m
+Login exitoso: { token: [32m'jwt-token-valido'[39m }
+
+[90mstdout[2m | src/Components/pages/Proyectos.test.jsx[2m > [22m[2mComponente Proyectos[2m > [22m[2m5. Envía el payload correctamente serializado y actualiza la lista tras una creación exitosa[22m[39m
+Creating project payload: {
+  nombre: [32m'Cloud Platform'[39m,
+  area: [32m'DevOps'[39m,
+  estado: [32m'Activo'[39m,
+  tecnologia: [32m'["AWS","Docker"]'[39m,
+  integrantes: [ [33m10[39m ]
+}
+Create project response: {
+  id: [33m999[39m,
+  nombre: [32m'Cloud Platform'[39m,
+  integrantes: [33m10[39m,
+  tecnologia: [ [32m'AWS'[39m, [32m'Docker'[39m ],
+  estado: [32m'Activo'[39m,
+  area: [32m'DevOps'[39m
+}
+
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m5. Envía el payload correctamente serializado y actualiza la lista tras una creación exitosa[33m 561[2mms[22m[39m
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra error si las contraseñas no coinciden[33m 508[2mms[22m[39m
+[90mstdout[2m | src/Components/pages/Proyectos.test.jsx[2m > [22m[2mComponente Proyectos[2m > [22m[2m6. Maneja de manera exhaustiva las respuestas de error dinámicas enviadas por el backend[22m[39m
+Creating project payload: {
+  nombre: [32m'Error Prueba'[39m,
+  area: [32m'QA'[39m,
+  estado: [32m'Planificado'[39m,
+  tecnologia: [32m'["Go"]'[39m,
+  integrantes: [ [33m1[39m ]
+}
+Error response body: { message: [32m'Nombre duplicado en el sistema'[39m }
+
+[90mstderr[2m | src/Components/pages/Proyectos.test.jsx[2m > [22m[2mComponente Proyectos[2m > [22m[2m6. Maneja de manera exhaustiva las respuestas de error dinámicas enviadas por el backend[22m[39m
+Error creando proyecto: {
+  response: { status: [33m400[39m, data: { message: [32m'Nombre duplicado en el sistema'[39m } }
+}
+
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m6. Maneja de manera exhaustiva las respuestas de error dinámicas enviadas por el backend[33m 386[2mms[22m[39m
+ [32m✓[39m src/Components/pages/Proyectos.test.jsx[2m > [22mComponente Proyectos[2m > [22m7. Desasocia el componente en el desmontaje (Unmount) cancelando la subscripción de isMounted
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra error si no acepta los términos[33m 491[2mms[22m[39m
+ [31m×[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mguarda el token en localStorage y redirige a /proyectos tras un login exitoso[33m 1289[2mms[22m[39m
+[31m   → Unable to find an element with the text: ¡Bienvenido de nuevo!. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"login-page"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"site-header"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"brand-logo"[31m
+        [36m>[31m
+          [36m<img[31m
+            [33malt[31m=[32m"Logo"[31m
+            [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[31m
+          [36m/>[31m
+          [36m<a[31m
+            [33mclass[31m=[32m"brand"[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/"[31m
+          [36m>[31m
+            [0mInnovatechSolutions[0m
+          [36m</a>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"nav-actions"[31m
+        [36m>[31m
+          [36m<a[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/login"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-secondary"[31m
+            [36m>[31m
+              [0mLogin[0m
+            [36m</button>[31m
+          [36m</a>[31m
+          [36m<a[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/crear-cuenta"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-primary"[31m
+            [36m>[31m
+              [0mCrear Cuenta[0m
+            [36m</button>[31m
+          [36m</a>[31m
+        [36m</div>[31m
+      [36m</header>[31m
+      [36m<main>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"login-container"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"login-card"[31m
+          [36m>[31m
+            [36m<section[31m
+              [33mclass[31m=[32m"login-welcome"[31m
+            [36m>[31m
+              [36m<button[31m
+                [33maria-label[31m=[32m"Volver"[31m
+                [33mclass[31m=[32m"back-arrow"[31m
+                [33mtype[31m=[32m"button"[31m
+              [36m>[31m
+                [0m←[0m
+              [36m</button>[31m
+              [36m<h1>[31m
+                [0mBienvenido de [0m
+                [36m<br />[31m
+                [0mnuevo[0m
+              [36m</h1>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"welcome-image-placeholder"[31m
+              [36m>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"temp-illustration"[31m
+                [36m>[31m
+                  [36m<img[31m
+                    [33malt[31m=[32m"Ilustración de bienvenida"[31m
+                    [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Fondo1.jpeg"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"brand-footer"[31m
+              [36m>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"brand-logo"[31m
+                [36m>[31m
+                  [36m<img[31m
+                    [33malt[31m=[32m"Logo marca"[31m
+                    [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"brand-name"[31m
+                [36m>[31m
+                  [0mInnovatech[0m
+                [36m</div>[31m
+              [36m</div>[31m
+            [36m</section>[31m
+            [36m<section[31m
+              [33mclass[31m=[32m"login-form-section"[31m
+            [36m>[31m
+              [36m<h2>[31m
+                [0mInicia [0m
+                [36m<span>[31m
+                  [0mSesión[0m
+                [36m</span>[31m
+              [36m</h2>[31m
+              [36m<form>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"input-group"[31m
+                [36m>[31m
+                  [36m<label[31m
+                    [33mfor[31m=[32m"email"[31m
+                  [36m>[31m
+                    [0mCorreo Electrónico:[0m
+                  [36m</label>[31m
+                  [36m<input[31m
+                    [33mid[31m=[32m"email"[31m
+                    [33mplaceholder[31m=[32m"admin@ejemplo.com"[31m
+                    [33mrequired[31m=[32m""[31m
+                    [33mtype[31m=[32m"email"[31m
+                    [33mvalue[31m=[32m"admin@ejemplo.com"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"input-group"[31m
+                [36m>[31m
+                  [36m<label[31m
+                    [33mfor[31m=[32m"clave1"[31m
+                  [36m>[31m
+                    [0mContraseña:[0m
+                  [36m</label>[31m
+                  [36m<input[31m
+                    [33mid[31m=[32m"clave1"[31m
+                    [33mplaceholder[31m=[32m"********"[31m
+                    [33mrequired[31m=[32m""[31m
+                    [33mtype[31m=[32m"password"[31m
+                    [33mvalue[31m=[32m"1234"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<button[31m
+                  [33mclass[31m=[32m"btn-login"[31m
+                  [33mtype[31m=[32m"submit"[31m
+                [36m>[31m
+                  [0mIngresar[0m
+                [36m</button>[31m
+              [36m</form>[31m
+            [36m</section>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"footer"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"footer-line"[31m
+        [36m/>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"footer-text"[31m
+        [36m>[31m
+          [0m© 2026 Mi App. Todos los derechos reservados.[0m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"login-page"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"site-header"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"brand-logo"[31m
+        [36m>[31m
+          [36m<img[31m
+            [33malt[31m=[32m"Logo"[31m
+            [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[31m
+          [36m/>[31m
+          [36m<a[31m
+            [33mclass[31m=[32m"brand"[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/"[31m
+          [36m>[31m
+            [0mInnovatechSolutions[0m
+          [36m</a>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"nav-actions"[31m
+        [36m>[31m
+          [36m<a[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/login"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-secondary"[31m
+            [36m>[31m
+              [0mLogin[0m
+            [36m</button>[31m
+          [36m</a>[31m
+          [36m<a[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/crear-cuenta"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-primary"[31m
+            [36m>[31m
+              [0mCrear Cuenta[0m
+            [36m</button>[31m
+          [36m</a>[31m
+        [36m</div>[31m
+      [36m</header>[31m
+      [36m<main>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"login-container"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"login-card"[31m
+          [36m>[31m
+            [36m<section[31m
+              [33mclass[31m=[32m"login-welcome"[31m
+            [36m>[31m
+              [36m<button[31m
+                [33maria-label[31m=[32m"Volver"[31m
+                [33mclass[31m=[32m"back-arrow"[31m
+                [33mtype[31m=[32m"button"[31m
+              [36m>[31m
+                [0m←[0m
+              [36m</button>[31m
+              [36m<h1>[31m
+                [0mBienvenido de [0m
+                [36m<br />[31m
+                [0mnuevo[0m
+              [36m</h1>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"welcome-image-placeholder"[31m
+              [36m>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"temp-illustration"[31m
+                [36m>[31m
+                  [36m<img[31m
+                    [33malt[31m=[32m"Ilustración de bienvenida"[31m
+                    [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Fondo1.jpeg"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"brand-footer"[31m
+              [36m>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"brand-logo"[31m
+                [36m>[31m
+                  [36m<img[31m
+                    [33malt[31m=[32m"Logo marca"[31m
+                    [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"brand-name"[31m
+                [36m>[31m
+                  [0mInnovatech[0m
+                [36m</div>[31m
+              [36m</div>[31m
+            [36m</section>[31m
+            [36m<section[31m
+              [33mclass[31m=[32m"login-form-section"[31m
+            [36m>[31m
+              [36m<h2>[31m
+                [0mInicia [0m
+                [36m<span>[31m
+                  [0mSesión[0m
+                [36m</span>[31m
+              [36m</h2>[31m
+              [36m<form>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"input-group"[31m
+                [36m>[31m
+                  [36m<label[31m
+                    [33mfor[31m=[32m"email"[31m
+                  [36m>[31m
+                    [0mCorreo Electrónico:[0m
+                  [36m</label>[31m
+                  [36m<input[31m
+                    [33mid[31m=[32m"email"[31m
+                    [33mplaceholder[31m=[32m"admin@ejemplo.com"[31m
+                    [33mrequired[31m=[32m""[31m
+                    [33mtype[31m=[32m"email"[31m
+                    [33mvalue[31m=[32m"admin@ejemplo.com"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"input-group"[31m
+                [36m>[31m
+                  [36m<label[31m
+                    [33mfor[31m=[32m"clave1"[31m
+                  [36m>[31m
+                    [0mContraseña:[0m
+                  [36m</label>[31m
+                  [36m<input[31m
+                    [33mid[31m=[32m"clave1"[31m
+                    [33mplaceholder[31m=[32m"********"[31m
+                    [33mrequired[31m=[32m""[31m
+                    [33mtype[31m=[32m"password"[31m
+                    [33mvalue[31m=[32m"1234"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<button[31m
+                  [33mclass[31m=[32m"btn-login"[31m
+                  [33mtype[31m=[32m"submit"[31m
+                [36m>[31m
+                  [0mIngresar[0m
+                [36m</button>[31m
+              [36m</form>[31m
+            [36m</section>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"footer"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"footer-line"[31m
+        [36m/>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"footer-text"[31m
+        [36m>[31m
+          [0m© 2026 Mi App. Todos los derechos reservados.[0m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+[90mstdout[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mrealiza el login exitoso pero no guarda token si la respuesta no lo incluye[22m[39m
+Login exitoso: {}
+
+[90mstdout[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mregistra exitosamente, guarda el token si viene en la respuesta y navega al login[22m[39m
+Registro exitoso: { token: [32m'mock-jwt-token'[39m }
+
+ [31m×[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mregistra exitosamente, guarda el token si viene en la respuesta y navega al login[33m 570[2mms[22m[39m
+[31m   → expected null to be 'mock-jwt-token' // Object.is equality[39m
+[90mstdout[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mregistra exitosamente sin devolver token y navega al login[22m[39m
+Registro exitoso: {}
+
+ [31m×[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mregistra exitosamente sin devolver token y navega al login[33m 541[2mms[22m[39m
+[31m   → expected "spy" to be called with arguments: [ '/login' ][90m
+
+Received: 
+
+[1m  1st spy call:
+
+[22m[2m  Array [[22m
+[2m    "/login",[22m
+[31m+   Object {[90m
+[31m+     "replace": true,[90m
+[31m+   },[90m
+[2m  ][22m
+[31m[90m
+
+Number of calls: [1m1[22m
+[31m[39m
+ [31m×[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mrealiza el login exitoso pero no guarda token si la respuesta no lo incluye[33m 1326[2mms[22m[39m
+[31m   → Unable to find an element with the text: ¡Bienvenido de nuevo!. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"login-page"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"site-header"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"brand-logo"[31m
+        [36m>[31m
+          [36m<img[31m
+            [33malt[31m=[32m"Logo"[31m
+            [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[31m
+          [36m/>[31m
+          [36m<a[31m
+            [33mclass[31m=[32m"brand"[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/"[31m
+          [36m>[31m
+            [0mInnovatechSolutions[0m
+          [36m</a>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"nav-actions"[31m
+        [36m>[31m
+          [36m<a[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/login"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-secondary"[31m
+            [36m>[31m
+              [0mLogin[0m
+            [36m</button>[31m
+          [36m</a>[31m
+          [36m<a[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/crear-cuenta"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-primary"[31m
+            [36m>[31m
+              [0mCrear Cuenta[0m
+            [36m</button>[31m
+          [36m</a>[31m
+        [36m</div>[31m
+      [36m</header>[31m
+      [36m<main>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"login-container"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"login-card"[31m
+          [36m>[31m
+            [36m<section[31m
+              [33mclass[31m=[32m"login-welcome"[31m
+            [36m>[31m
+              [36m<button[31m
+                [33maria-label[31m=[32m"Volver"[31m
+                [33mclass[31m=[32m"back-arrow"[31m
+                [33mtype[31m=[32m"button"[31m
+              [36m>[31m
+                [0m←[0m
+              [36m</button>[31m
+              [36m<h1>[31m
+                [0mBienvenido de [0m
+                [36m<br />[31m
+                [0mnuevo[0m
+              [36m</h1>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"welcome-image-placeholder"[31m
+              [36m>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"temp-illustration"[31m
+                [36m>[31m
+                  [36m<img[31m
+                    [33malt[31m=[32m"Ilustración de bienvenida"[31m
+                    [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Fondo1.jpeg"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"brand-footer"[31m
+              [36m>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"brand-logo"[31m
+                [36m>[31m
+                  [36m<img[31m
+                    [33malt[31m=[32m"Logo marca"[31m
+                    [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"brand-name"[31m
+                [36m>[31m
+                  [0mInnovatech[0m
+                [36m</div>[31m
+              [36m</div>[31m
+            [36m</section>[31m
+            [36m<section[31m
+              [33mclass[31m=[32m"login-form-section"[31m
+            [36m>[31m
+              [36m<h2>[31m
+                [0mInicia [0m
+                [36m<span>[31m
+                  [0mSesión[0m
+                [36m</span>[31m
+              [36m</h2>[31m
+              [36m<form>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"input-group"[31m
+                [36m>[31m
+                  [36m<label[31m
+                    [33mfor[31m=[32m"email"[31m
+                  [36m>[31m
+                    [0mCorreo Electrónico:[0m
+                  [36m</label>[31m
+                  [36m<input[31m
+                    [33mid[31m=[32m"email"[31m
+                    [33mplaceholder[31m=[32m"admin@ejemplo.com"[31m
+                    [33mrequired[31m=[32m""[31m
+                    [33mtype[31m=[32m"email"[31m
+                    [33mvalue[31m=[32m"admin@ejemplo.com"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"input-group"[31m
+                [36m>[31m
+                  [36m<label[31m
+                    [33mfor[31m=[32m"clave1"[31m
+                  [36m>[31m
+                    [0mContraseña:[0m
+                  [36m</label>[31m
+                  [36m<input[31m
+                    [33mid[31m=[32m"clave1"[31m
+                    [33mplaceholder[31m=[32m"********"[31m
+                    [33mrequired[31m=[32m""[31m
+                    [33mtype[31m=[32m"password"[31m
+                    [33mvalue[31m=[32m"1234"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<button[31m
+                  [33mclass[31m=[32m"btn-login"[31m
+                  [33mtype[31m=[32m"submit"[31m
+                [36m>[31m
+                  [0mIngresar[0m
+                [36m</button>[31m
+              [36m</form>[31m
+            [36m</section>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"footer"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"footer-line"[31m
+        [36m/>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"footer-text"[31m
+        [36m>[31m
+          [0m© 2026 Mi App. Todos los derechos reservados.[0m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"login-page"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"site-header"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"brand-logo"[31m
+        [36m>[31m
+          [36m<img[31m
+            [33malt[31m=[32m"Logo"[31m
+            [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[31m
+          [36m/>[31m
+          [36m<a[31m
+            [33mclass[31m=[32m"brand"[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/"[31m
+          [36m>[31m
+            [0mInnovatechSolutions[0m
+          [36m</a>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"nav-actions"[31m
+        [36m>[31m
+          [36m<a[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/login"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-secondary"[31m
+            [36m>[31m
+              [0mLogin[0m
+            [36m</button>[31m
+          [36m</a>[31m
+          [36m<a[31m
+            [33mdata-discover[31m=[32m"true"[31m
+            [33mhref[31m=[32m"/crear-cuenta"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-primary"[31m
+            [36m>[31m
+              [0mCrear Cuenta[0m
+            [36m</button>[31m
+          [36m</a>[31m
+        [36m</div>[31m
+      [36m</header>[31m
+      [36m<main>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"login-container"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"login-card"[31m
+          [36m>[31m
+            [36m<section[31m
+              [33mclass[31m=[32m"login-welcome"[31m
+            [36m>[31m
+              [36m<button[31m
+                [33maria-label[31m=[32m"Volver"[31m
+                [33mclass[31m=[32m"back-arrow"[31m
+                [33mtype[31m=[32m"button"[31m
+              [36m>[31m
+                [0m←[0m
+              [36m</button>[31m
+              [36m<h1>[31m
+                [0mBienvenido de [0m
+                [36m<br />[31m
+                [0mnuevo[0m
+              [36m</h1>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"welcome-image-placeholder"[31m
+              [36m>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"temp-illustration"[31m
+                [36m>[31m
+                  [36m<img[31m
+                    [33malt[31m=[32m"Ilustración de bienvenida"[31m
+                    [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Fondo1.jpeg"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"brand-footer"[31m
+              [36m>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"brand-logo"[31m
+                [36m>[31m
+                  [36m<img[31m
+                    [33malt[31m=[32m"Logo marca"[31m
+                    [33msrc[31m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"brand-name"[31m
+                [36m>[31m
+                  [0mInnovatech[0m
+                [36m</div>[31m
+              [36m</div>[31m
+            [36m</section>[31m
+            [36m<section[31m
+              [33mclass[31m=[32m"login-form-section"[31m
+            [36m>[31m
+              [36m<h2>[31m
+                [0mInicia [0m
+                [36m<span>[31m
+                  [0mSesión[0m
+                [36m</span>[31m
+              [36m</h2>[31m
+              [36m<form>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"input-group"[31m
+                [36m>[31m
+                  [36m<label[31m
+                    [33mfor[31m=[32m"email"[31m
+                  [36m>[31m
+                    [0mCorreo Electrónico:[0m
+                  [36m</label>[31m
+                  [36m<input[31m
+                    [33mid[31m=[32m"email"[31m
+                    [33mplaceholder[31m=[32m"admin@ejemplo.com"[31m
+                    [33mrequired[31m=[32m""[31m
+                    [33mtype[31m=[32m"email"[31m
+                    [33mvalue[31m=[32m"admin@ejemplo.com"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"input-group"[31m
+                [36m>[31m
+                  [36m<label[31m
+                    [33mfor[31m=[32m"clave1"[31m
+                  [36m>[31m
+                    [0mContraseña:[0m
+                  [36m</label>[31m
+                  [36m<input[31m
+                    [33mid[31m=[32m"clave1"[31m
+                    [33mplaceholder[31m=[32m"********"[31m
+                    [33mrequired[31m=[32m""[31m
+                    [33mtype[31m=[32m"password"[31m
+                    [33mvalue[31m=[32m"1234"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+                [36m<button[31m
+                  [33mclass[31m=[32m"btn-login"[31m
+                  [33mtype[31m=[32m"submit"[31m
+                [36m>[31m
+                  [0mIngresar[0m
+                [36m</button>[31m
+              [36m</form>[31m
+            [36m</section>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"footer"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"footer-line"[31m
+        [36m/>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"footer-text"[31m
+        [36m>[31m
+          [0m© 2026 Mi App. Todos los derechos reservados.[0m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+[90mstderr[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mmuestra mensaje de error del backend si registerUser responde con error y err.response[22m[39m
+Error al registrar: { response: { data: { message: [32m'Email ya registrado'[39m } } }
+
+[90mstderr[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mmuestra mensaje de credenciales incorrectas (Error 401)[22m[39m
+Error en la petición: { response: { status: [33m401[39m } }
+
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra mensaje de error del backend si registerUser responde con error y err.response[33m 538[2mms[22m[39m
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra mensaje de credenciales incorrectas (Error 401)[33m 308[2mms[22m[39m
+[90mstderr[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mmuestra error genérico del servidor cuando el status no es 401[22m[39m
+Error en la petición: { response: { status: [33m500[39m } }
+
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra error genérico del servidor cuando el status no es 401
+[90mstderr[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mmuestra mensaje de error de backend por defecto si no hay message en la respuesta[22m[39m
+Error al registrar: { response: { data: {} } }
+
+[90mstderr[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mmuestra error de conexión cuando la petición se hizo pero no hubo respuesta (BFF apagado)[22m[39m
+Error en la petición: { request: {} }
+
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra mensaje de error de backend por defecto si no hay message en la respuesta[33m 585[2mms[22m[39m
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra error de conexión cuando la petición se hizo pero no hubo respuesta (BFF apagado)
+[90mstderr[2m | src/Components/pages/Login.test.jsx[2m > [22m[2mLogin[2m > [22m[2mmuestra un error inesperado si la promesa falla sin response ni request[22m[39m
+Error en la petición: Error: Crash
+    at [90mc:\Users\Cristopher\Downloads\fulsjsjsjs\Frontend_FullStack\Frontend\[39msrc\Components\pages\Login.test.jsx:157:49
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:135:14
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:60:26
+    at runTest (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:781:17)
+    at runSuite (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:909:15)
+    at runSuite (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:909:15)
+    at runFiles (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:958:5)
+    at startTests (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:967:3)
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+    at withEnv (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:83:5)
+
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mmuestra un error inesperado si la promesa falla sin response ni request
+ [32m✓[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mejecuta window.history.back al hacer click en el botón Volver
+[90mstderr[2m | src/Components/pages/CrearCuenta.test.jsx[2m > [22m[2mCrearCuenta[2m > [22m[2mmuestra mensaje de conexión si registerUser lanza sin response[22m[39m
+Error al registrar: Error: Network Error
+    at [90mc:\Users\Cristopher\Downloads\fulsjsjsjs\Frontend_FullStack\Frontend\[39msrc\Components\pages\CrearCuenta.test.jsx:229:26
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:135:14
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:60:26
+    at runTest (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:781:17)
+    at runSuite (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:909:15)
+    at runSuite (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:909:15)
+    at runFiles (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:958:5)
+    at startTests (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4m@vitest/runner[24m/dist/index.js:967:3)
+    at file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+    at withEnv (file:///C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/node_modules/[4mvitest[24m/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:83:5)
+
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mmuestra mensaje de conexión si registerUser lanza sin response[33m 533[2mms[22m[39m
+ [32m✓[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mllama history.back cuando se presiona el botón Volver
+
+[31m⎯⎯⎯⎯⎯⎯⎯[1m[7m Failed Tests 4 [27m[22m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mregistra exitosamente, guarda el token si viene en la respuesta y navega al login
+[31m[1mAssertionError[22m: expected null to be 'mock-jwt-token' // Object.is equality[39m
+
+[32m- Expected:[39m 
+"mock-jwt-token"
+
+[31m+ Received:[39m 
+null
+
+[90m [2m❯[22m src/Components/pages/CrearCuenta.test.jsx:[2m152:43[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/Components/pages/CrearCuenta.test.jsx[2m > [22mCrearCuenta[2m > [22mregistra exitosamente sin devolver token y navega al login
+[31m[1mAssertionError[22m: expected "spy" to be called with arguments: [ '/login' ][90m
+
+Received: 
+
+[1m  1st spy call:
+
+[22m[2m  Array [[22m
+[2m    "/login",[22m
+[31m+   Object {[90m
+[31m+     "replace": true,[90m
+[31m+   },[90m
+[2m  ][22m
+[31m[90m
+
+Number of calls: [1m1[22m
+[31m[39m
+[90m [2m❯[22m src/Components/pages/CrearCuenta.test.jsx:[2m178:26[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mguarda el token en localStorage y redirige a /proyectos tras un login exitoso
+[31m[1mTestingLibraryElementError[22m[39m: Unable to find an element with the text: ¡Bienvenido de nuevo!. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"login-page"[39m
+    [36m>[39m
+      [36m<header[39m
+        [33mclass[39m=[32m"site-header"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"brand-logo"[39m
+        [36m>[39m
+          [36m<img[39m
+            [33malt[39m=[32m"Logo"[39m
+            [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[39m
+          [36m/>[39m
+          [36m<a[39m
+            [33mclass[39m=[32m"brand"[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/"[39m
+          [36m>[39m
+            [0mInnovatechSolutions[0m
+          [36m</a>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-actions"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/login"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"button-secondary"[39m
+            [36m>[39m
+              [0mLogin[0m
+            [36m</button>[39m
+          [36m</a>[39m
+          [36m<a[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/crear-cuenta"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"button-primary"[39m
+            [36m>[39m
+              [0mCrear Cuenta[0m
+            [36m</button>[39m
+          [36m</a>[39m
+        [36m</div>[39m
+      [36m</header>[39m
+      [36m<main>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"login-container"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"login-card"[39m
+          [36m>[39m
+            [36m<section[39m
+              [33mclass[39m=[32m"login-welcome"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Volver"[39m
+                [33mclass[39m=[32m"back-arrow"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0m←[0m
+              [36m</button>[39m
+              [36m<h1>[39m
+                [0mBienvenido de [0m
+                [36m<br />[39m
+                [0mnuevo[0m
+              [36m</h1>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"welcome-image-placeholder"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"temp-illustration"[39m
+                [36m>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m"Ilustración de bienvenida"[39m
+                    [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Fondo1.jpeg"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"brand-footer"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"brand-logo"[39m
+                [36m>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m"Logo marca"[39m
+                    [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"brand-name"[39m
+                [36m>[39m
+                  [0mInnovatech[0m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</section>[39m
+            [36m<section[39m
+              [33mclass[39m=[32m"login-form-section"[39m
+            [36m>[39m
+              [36m<h2>[39m
+                [0mInicia [0m
+                [36m<span>[39m
+                  [0mSesión[0m
+                [36m</span>[39m
+              [36m</h2>[39m
+              [36m<form>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"input-group"[39m
+                [36m>[39m
+                  [36m<label[39m
+                    [33mfor[39m=[32m"email"[39m
+                  [36m>[39m
+                    [0mCorreo Electrónico:[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mid[39m=[32m"email"[39m
+                    [33mplaceholder[39m=[32m"admin@ejemplo.com"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"email"[39m
+                    [33mvalue[39m=[32m"admin@ejemplo.com"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"input-group"[39m
+                [36m>[39m
+                  [36m<label[39m
+                    [33mfor[39m=[32m"clave1"[39m
+                  [36m>[39m
+                    [0mContraseña:[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mid[39m=[32m"clave1"[39m
+                    [33mplaceholder[39m=[32m"********"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"password"[39m
+                    [33mvalue[39m=[32m"1234"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn-login"[39m
+                  [33mtype[39m=[32m"submit"[39m
+                [36m>[39m
+                  [0mIngresar[0m
+                [36m</button>[39m
+              [36m</form>[39m
+            [36m</section>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</main>[39m
+      [36m<footer[39m
+        [33mclass[39m=[32m"footer"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"footer-line"[39m
+        [36m/>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"footer-text"[39m
+        [36m>[39m
+          [0m© 2026 Mi App. Todos los derechos reservados.[0m
+        [36m</p>[39m
+      [36m</footer>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"login-page"[39m
+    [36m>[39m
+      [36m<header[39m
+        [33mclass[39m=[32m"site-header"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"brand-logo"[39m
+        [36m>[39m
+          [36m<img[39m
+            [33malt[39m=[32m"Logo"[39m
+            [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[39m
+          [36m/>[39m
+          [36m<a[39m
+            [33mclass[39m=[32m"brand"[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/"[39m
+          [36m>[39m
+            [0mInnovatechSolutions[0m
+          [36m</a>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-actions"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/login"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"button-secondary"[39m
+            [36m>[39m
+              [0mLogin[0m
+            [36m</button>[39m
+          [36m</a>[39m
+          [36m<a[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/crear-cuenta"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"button-primary"[39m
+            [36m>[39m
+              [0mCrear Cuenta[0m
+            [36m</button>[39m
+          [36m</a>[39m
+        [36m</div>[39m
+      [36m</header>[39m
+      [36m<main>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"login-container"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"login-card"[39m
+          [36m>[39m
+            [36m<section[39m
+              [33mclass[39m=[32m"login-welcome"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Volver"[39m
+                [33mclass[39m=[32m"back-arrow"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0m←[0m
+              [36m</button>[39m
+              [36m<h1>[39m
+                [0mBienvenido de [0m
+                [36m<br />[39m
+                [0mnuevo[0m
+              [36m</h1>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"welcome-image-placeholder"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"temp-illustration"[39m
+                [36m>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m"Ilustración de bienvenida"[39m
+                    [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Fondo1.jpeg"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"brand-footer"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"brand-logo"[39m
+                [36m>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m"Logo marca"[39m
+                    [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"brand-name"[39m
+                [36m>[39m
+                  [0mInnovatech[0m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</section>[39m
+            [36m<section[39m
+              [33mclass[39m=[32m"login-form-section"[39m
+            [36m>[39m
+              [36m<h2>[39m
+                [0mInicia [0m
+                [36m<span>[39m
+                  [0mSesión[0m
+                [36m</span>[39m
+              [36m</h2>[39m
+              [36m<form>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"input-group"[39m
+                [36m>[39m
+                  [36m<label[39m
+                    [33mfor[39m=[32m"email"[39m
+                  [36m>[39m
+                    [0mCorreo Electrónico:[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mid[39m=[32m"email"[39m
+                    [33mplaceholder[39m=[32m"admin@ejemplo.com"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"email"[39m
+                    [33mvalue[39m=[32m"admin@ejemplo.com"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"input-group"[39m
+                [36m>[39m
+                  [36m<label[39m
+                    [33mfor[39m=[32m"clave1"[39m
+                  [36m>[39m
+                    [0mContraseña:[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mid[39m=[32m"clave1"[39m
+                    [33mplaceholder[39m=[32m"********"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"password"[39m
+                    [33mvalue[39m=[32m"1234"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn-login"[39m
+                  [33mtype[39m=[32m"submit"[39m
+                [36m>[39m
+                  [0mIngresar[0m
+                [36m</button>[39m
+              [36m</form>[39m
+            [36m</section>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</main>[39m
+      [36m<footer[39m
+        [33mclass[39m=[32m"footer"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"footer-line"[39m
+        [36m/>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"footer-text"[39m
+        [36m>[39m
+          [0m© 2026 Mi App. Todos los derechos reservados.[0m
+        [36m</p>[39m
+      [36m</footer>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+[90m [2m❯[22m waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[90m [2m❯[22m node_modules/@testing-library/dom/dist/query-helpers.js:[2m86:33[22m[39m
+[90m [2m❯[22m src/Components/pages/Login.test.jsx:[2m83:25[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/Components/pages/Login.test.jsx[2m > [22mLogin[2m > [22mrealiza el login exitoso pero no guarda token si la respuesta no lo incluye
+[31m[1mTestingLibraryElementError[22m[39m: Unable to find an element with the text: ¡Bienvenido de nuevo!. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"login-page"[39m
+    [36m>[39m
+      [36m<header[39m
+        [33mclass[39m=[32m"site-header"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"brand-logo"[39m
+        [36m>[39m
+          [36m<img[39m
+            [33malt[39m=[32m"Logo"[39m
+            [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[39m
+          [36m/>[39m
+          [36m<a[39m
+            [33mclass[39m=[32m"brand"[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/"[39m
+          [36m>[39m
+            [0mInnovatechSolutions[0m
+          [36m</a>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-actions"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/login"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"button-secondary"[39m
+            [36m>[39m
+              [0mLogin[0m
+            [36m</button>[39m
+          [36m</a>[39m
+          [36m<a[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/crear-cuenta"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"button-primary"[39m
+            [36m>[39m
+              [0mCrear Cuenta[0m
+            [36m</button>[39m
+          [36m</a>[39m
+        [36m</div>[39m
+      [36m</header>[39m
+      [36m<main>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"login-container"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"login-card"[39m
+          [36m>[39m
+            [36m<section[39m
+              [33mclass[39m=[32m"login-welcome"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Volver"[39m
+                [33mclass[39m=[32m"back-arrow"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0m←[0m
+              [36m</button>[39m
+              [36m<h1>[39m
+                [0mBienvenido de [0m
+                [36m<br />[39m
+                [0mnuevo[0m
+              [36m</h1>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"welcome-image-placeholder"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"temp-illustration"[39m
+                [36m>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m"Ilustración de bienvenida"[39m
+                    [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Fondo1.jpeg"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"brand-footer"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"brand-logo"[39m
+                [36m>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m"Logo marca"[39m
+                    [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"brand-name"[39m
+                [36m>[39m
+                  [0mInnovatech[0m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</section>[39m
+            [36m<section[39m
+              [33mclass[39m=[32m"login-form-section"[39m
+            [36m>[39m
+              [36m<h2>[39m
+                [0mInicia [0m
+                [36m<span>[39m
+                  [0mSesión[0m
+                [36m</span>[39m
+              [36m</h2>[39m
+              [36m<form>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"input-group"[39m
+                [36m>[39m
+                  [36m<label[39m
+                    [33mfor[39m=[32m"email"[39m
+                  [36m>[39m
+                    [0mCorreo Electrónico:[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mid[39m=[32m"email"[39m
+                    [33mplaceholder[39m=[32m"admin@ejemplo.com"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"email"[39m
+                    [33mvalue[39m=[32m"admin@ejemplo.com"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"input-group"[39m
+                [36m>[39m
+                  [36m<label[39m
+                    [33mfor[39m=[32m"clave1"[39m
+                  [36m>[39m
+                    [0mContraseña:[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mid[39m=[32m"clave1"[39m
+                    [33mplaceholder[39m=[32m"********"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"password"[39m
+                    [33mvalue[39m=[32m"1234"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn-login"[39m
+                  [33mtype[39m=[32m"submit"[39m
+                [36m>[39m
+                  [0mIngresar[0m
+                [36m</button>[39m
+              [36m</form>[39m
+            [36m</section>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</main>[39m
+      [36m<footer[39m
+        [33mclass[39m=[32m"footer"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"footer-line"[39m
+        [36m/>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"footer-text"[39m
+        [36m>[39m
+          [0m© 2026 Mi App. Todos los derechos reservados.[0m
+        [36m</p>[39m
+      [36m</footer>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"login-page"[39m
+    [36m>[39m
+      [36m<header[39m
+        [33mclass[39m=[32m"site-header"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"brand-logo"[39m
+        [36m>[39m
+          [36m<img[39m
+            [33malt[39m=[32m"Logo"[39m
+            [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[39m
+          [36m/>[39m
+          [36m<a[39m
+            [33mclass[39m=[32m"brand"[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/"[39m
+          [36m>[39m
+            [0mInnovatechSolutions[0m
+          [36m</a>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-actions"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/login"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"button-secondary"[39m
+            [36m>[39m
+              [0mLogin[0m
+            [36m</button>[39m
+          [36m</a>[39m
+          [36m<a[39m
+            [33mdata-discover[39m=[32m"true"[39m
+            [33mhref[39m=[32m"/crear-cuenta"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"button-primary"[39m
+            [36m>[39m
+              [0mCrear Cuenta[0m
+            [36m</button>[39m
+          [36m</a>[39m
+        [36m</div>[39m
+      [36m</header>[39m
+      [36m<main>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"login-container"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"login-card"[39m
+          [36m>[39m
+            [36m<section[39m
+              [33mclass[39m=[32m"login-welcome"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Volver"[39m
+                [33mclass[39m=[32m"back-arrow"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0m←[0m
+              [36m</button>[39m
+              [36m<h1>[39m
+                [0mBienvenido de [0m
+                [36m<br />[39m
+                [0mnuevo[0m
+              [36m</h1>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"welcome-image-placeholder"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"temp-illustration"[39m
+                [36m>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m"Ilustración de bienvenida"[39m
+                    [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Fondo1.jpeg"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"brand-footer"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"brand-logo"[39m
+                [36m>[39m
+                  [36m<img[39m
+                    [33malt[39m=[32m"Logo marca"[39m
+                    [33msrc[39m=[32m"/@fs/C:/Users/Cristopher/Downloads/fulsjsjsjs/Frontend_FullStack/Frontend/src/assets/Logos/Logo.jpeg"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"brand-name"[39m
+                [36m>[39m
+                  [0mInnovatech[0m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</section>[39m
+            [36m<section[39m
+              [33mclass[39m=[32m"login-form-section"[39m
+            [36m>[39m
+              [36m<h2>[39m
+                [0mInicia [0m
+                [36m<span>[39m
+                  [0mSesión[0m
+                [36m</span>[39m
+              [36m</h2>[39m
+              [36m<form>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"input-group"[39m
+                [36m>[39m
+                  [36m<label[39m
+                    [33mfor[39m=[32m"email"[39m
+                  [36m>[39m
+                    [0mCorreo Electrónico:[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mid[39m=[32m"email"[39m
+                    [33mplaceholder[39m=[32m"admin@ejemplo.com"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"email"[39m
+                    [33mvalue[39m=[32m"admin@ejemplo.com"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"input-group"[39m
+                [36m>[39m
+                  [36m<label[39m
+                    [33mfor[39m=[32m"clave1"[39m
+                  [36m>[39m
+                    [0mContraseña:[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mid[39m=[32m"clave1"[39m
+                    [33mplaceholder[39m=[32m"********"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"password"[39m
+                    [33mvalue[39m=[32m"1234"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn-login"[39m
+                  [33mtype[39m=[32m"submit"[39m
+                [36m>[39m
+                  [0mIngresar[0m
+                [36m</button>[39m
+              [36m</form>[39m
+            [36m</section>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</main>[39m
+      [36m<footer[39m
+        [33mclass[39m=[32m"footer"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"footer-line"[39m
+        [36m/>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"footer-text"[39m
+        [36m>[39m
+          [0m© 2026 Mi App. Todos los derechos reservados.[0m
+        [36m</p>[39m
+      [36m</footer>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+[90m [2m❯[22m waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[90m [2m❯[22m node_modules/@testing-library/dom/dist/query-helpers.js:[2m86:33[22m[39m
+[90m [2m❯[22m src/Components/pages/Login.test.jsx:[2m103:25[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯[22m[39m
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m13 passed[39m[22m[90m (15)[39m
+[2m      Tests [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m76 passed[39m[22m[90m (80)[39m
+[2m   Start at [22m 01:35:31
+[2m   Duration [22m 8.38s[2m (transform 1.46s, setup 5.27s, collect 11.60s, tests 14.29s, environment 18.96s, prepare 5.81s)[22m
+
