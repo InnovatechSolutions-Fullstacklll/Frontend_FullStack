@@ -5,7 +5,7 @@ import Navbar from "../Organism/Navbar";
 import Sidebar from "../Organism/Sidebar";
 import Footer from "../Organism/Footer";
 import { isAuthenticated, logout } from "../../Service/authService";
-import Fondo1 from "../../assets/Logos/Fondo1.jpeg";
+import Fondo1 from "../../assets/Logos/Fondo3.jpeg";
 
 function Home() {
   const [autenticado, setAutenticado] = useState(false);
